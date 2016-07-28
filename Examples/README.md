@@ -1,13 +1,18 @@
-##Aspose.Slides for Java Examples
+##Aspose.CAD for Java Examples
 
-This package contains Java Example Project for [Aspose.Slides for Java](http://www.aspose.com/java/powerpoint-component.aspx).
+This repository contains Java Example Project for [Aspose.CAD for Java](http://www.aspose.com/products/cad) which will help you learn Aspose.CAD for Java and write your own applications.
 
 <p align="center">
-  <a title="Download complete Aspose.Slides for Java source code" href="https://github.com/asposeslides/Aspose_Slides_Java/archive/master.zip">
+  <a title="Download Examples ZIP" href="https://github.com/aspose-cad/Aspose.CAD-for-Java/archive/master.zip">
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
 </p>
 
+
 ## How to Run the Examples?
 
-All the examples are arranged in src folder and any modern IDE like IntelliJ IDEA, Eclipse, Netbeans etc can import the source folder easily. Visit our [documentation website](http://www.aspose.com/docs/display/slidesjava/How+to+Run+the+Examples) for more details.
+After you have downloaded the ZIP file from the [Download ZIP](https://github.com/aspose-cad/Aspose.CAD-for-Java/archive/master.zip) link above, please check the following link with detailed instructions on how to run these Source Code Examples.
+
+[How to Run the Examples](http://www.aspose.com/docs/display/cadnet/How+to+Run+the+Examples)
+
+Please feel free to contact us if you have any question, issue or suggestion.

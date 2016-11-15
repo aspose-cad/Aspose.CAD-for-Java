@@ -38,32 +38,31 @@ public class SearchTextInDWGAutoCADFile {
 	
 	private static void searchForTextInSpecificLayout() {
 
-        // Load an existing DWG file as CadImage.
-        CadImage cadImage = (CadImage) CadImage.load(dataDir + "sample_file.dwg");
+        	// Load an existing DWG file as CadImage.
+        	CadImage cadImage = (CadImage) CadImage.load(dataDir + "sample_file.dwg");
         
-        // get all layout names and link each layout with corresponding block with entities
-        CadLayoutDictionary layouts = cadImage.getLayouts();
-        String[] layoutNames = new String[layouts.size()];
-        int i = 0;
+        	// get all layout names and link each layout with corresponding block with entities
+        	CadLayoutDictionary layouts = cadImage.getLayouts();
+        	String[] layoutNames = new String[layouts.size()];
+        	int i = 0;
         
-        for (com.aspose.cad.fileformats.cad.cadobjects.CadLayout layout : layouts.getValues()) {
-            layoutNames[i++] = layout.getLayoutName();
-            System.out.println("Layout " + layout.getLayoutName() + " is found");
+        	for (com.aspose.cad.fileformats.cad.cadobjects.CadLayout layout : layouts.getValues()) {
+            		layoutNames[i++] = layout.getLayoutName();
+            		System.out.println("Layout " + layout.getLayoutName() + " is found");
 
-            // find block, applicable for DWG only
-            CadBlockTableObject blockTableObjectReference = null;
-            for (CadBlockTableObject tableObject : cadImage.getBlocksTables()) {
-                if (String.CASE_INSENSITIVE_ORDER.compare(tableObject.getHardPointerToLayout(), layout.getObjectHandle()) == 0) {
-                    blockTableObjectReference = tableObject;
-                    break;
-                }
-            }
+            		// find block, applicable for DWG only
+            		CadBlockTableObject blockTableObjectReference = null;
+            		for (CadBlockTableObject tableObject : cadImage.getBlocksTables()) {
+               			if (String.CASE_INSENSITIVE_ORDER.compare(tableObject.getHardPointerToLayout(), layout.getObjectHandle()) == 0) {
+                    			blockTableObjectReference = tableObject;
+                    			break;
+                		}
+            		}
 
-            // Collection cadBlockEntity.Entities contains information about all entities on specific layout
-            // if this collection has no elements it means layout is a copy of Model layout and contains the same entities
-            // Below line of code is for reference
-            CadBlockEntity cadBlockEntity = cadImage.getBlockEntities().get_Item(blockTableObjectReference.getBlockName());
-        }
-    }
-
+            		// Collection cadBlockEntity.Entities contains information about all entities on specific layout
+           	 	// if this collection has no elements it means layout is a copy of Model layout and contains the same entities
+            		// Below line of code is for reference
+            		CadBlockEntity cadBlockEntity = cadImage.getBlockEntities().get_Item(blockTableObjectReference.getBlockName());
+        	}
+	}
 }

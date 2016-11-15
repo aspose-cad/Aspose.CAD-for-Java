@@ -17,7 +17,7 @@ public class ExportingDGNAutoCADFormatToPDF {
 		String dataDir = Utils.getDataDir(ExportingDGNAutoCADFormatToPDF.class) + "ExportingDGN/";
 		
 		// load an existing DGN file as DgnImage.
-		DgnImage dgnImage = (DgnImage)Image.load(dataDir + "Sample.dgn");
+		DgnImage dgnImage = (DgnImage)Image.load(dataDir + "Nikon_D90_Camera.dgn");
 
 		DgnRasterizationOptions rasterizationOptions = new DgnRasterizationOptions();
 

@@ -1,14 +1,12 @@
 package com.aspose.cad.examples.DWGDrawings;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.cad.CadImage;
 import com.aspose.cad.fileformats.cad.CadLayoutDictionary;
 import com.aspose.cad.fileformats.cad.cadobjects.CadBaseEntity;
-import com.aspose.cad.fileformats.cad.cadobjects.CadLayout;
+import com.aspose.cad.fileformats.cad.cadobjects.CadBlockEntity;
 import com.aspose.cad.fileformats.cad.cadobjects.CadText;
+import com.aspose.cad.fileformats.cad.cadtables.CadBlockTableObject;
 
 public class SearchTextInDWGAutoCADFile {
 
@@ -25,7 +23,7 @@ public class SearchTextInDWGAutoCADFile {
 	private static void searchTextInDWGAutoCADFile() {
 
 		// Load an existing DWG file as CadImage.
-		CadImage cadImage = (CadImage) CadImage.load(dataDir + "sample.dwg");
+		CadImage cadImage = (CadImage) CadImage.load(dataDir + "sample_file.dwg");
 
 		// Search for text in the file
 		for (CadBaseEntity entity : cadImage.getEntities()) {
@@ -37,30 +35,35 @@ public class SearchTextInDWGAutoCADFile {
 			}
 		}
 	}
-
+	
 	private static void searchForTextInSpecificLayout() {
 
-		// Load an existing DWG file as CadImage.
-		CadImage cadImage = (CadImage) CadImage.load(dataDir + "sample.dwg");
+        // Load an existing DWG file as CadImage.
+        CadImage cadImage = (CadImage) CadImage.load(dataDir + "sample_file.dwg");
+        
+        // get all layout names and link each layout with corresponding block with entities
+        CadLayoutDictionary layouts = cadImage.getLayouts();
+        String[] layoutNames = new String[layouts.size()];
+        int i = 0;
+        
+        for (com.aspose.cad.fileformats.cad.cadobjects.CadLayout layout : layouts.getValues()) {
+            layoutNames[i++] = layout.getLayoutName();
+            System.out.println("Layout " + layout.getLayoutName() + " is found");
 
-		// Get all layout names and separate entities between layouts by their soft owners
-		CadLayoutDictionary layoutsDxf = cadImage.getLayouts();
-		String[] layoutDxfNames = new String[layoutsDxf.size()];
-		int j = 0;
+            // find block, applicable for DWG only
+            CadBlockTableObject blockTableObjectReference = null;
+            for (CadBlockTableObject tableObject : cadImage.getBlocksTables()) {
+                if (String.CASE_INSENSITIVE_ORDER.compare(tableObject.getHardPointerToLayout(), layout.getObjectHandle()) == 0) {
+                    blockTableObjectReference = tableObject;
+                    break;
+                }
+            }
 
-		HashMap<String, ArrayList<CadBaseEntity>> entitiesOnLayouts = new HashMap<String, ArrayList<CadBaseEntity>>();
-
-		for (CadLayout layout : layoutsDxf.getValues()) {
-			layoutDxfNames[j++] = layout.getLayoutName();
-			System.out.println("Layout " + layout.getLayoutName() + " is found");
-			entitiesOnLayouts.put(layout.getBlockTableRecordHandle(), new ArrayList<CadBaseEntity>());
-		}
-
-		for (CadBaseEntity entity : cadImage.getEntities()) {
-			entitiesOnLayouts.get(entity.getSoftOwner()).add(entity);
-		}
-		
-		cadImage.save (dataDir + "SearchForTextInSpecificLayout_Out.dwg");
-	}
+            // Collection cadBlockEntity.Entities contains information about all entities on specific layout
+            // if this collection has no elements it means layout is a copy of Model layout and contains the same entities
+            // Below line of code is for reference
+            CadBlockEntity cadBlockEntity = cadImage.getBlockEntities().get_Item(blockTableObjectReference.getBlockName());
+        }
+    }
 
 }

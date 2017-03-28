@@ -6,7 +6,7 @@ This repository contains [Examples](Examples), Plugins and Showcases for [Aspose
 
 <p align="center">
 
-  <a title="Download complete Aspose.CAD for Java source code" href="https://github.com/aspose-cad/Aspose.CAD-for-.NET/archive/master.zip">
+  <a title="Download complete Aspose.CAD for Java source code" href="https://github.com/aspose-cad/Aspose.CAD-for-Java/archive/master.zip">
 	<img src="http://i.imgur.com/hwNhrGZ.png" />
   </a>
 </p>
@@ -20,6 +20,6 @@ Directory | Description
 + **Website:** [www.aspose.com](http://www.aspose.com)
 + **Product Home:** [Aspose.CAD for Java](http://www.aspose.com/products/cad/java)
 + **Download:** [Download Aspose.CAD for Java](http://www.aspose.com/downloads/cad/java)
-+ **Documentation:** [Aspose.CAD for Java Documentation](http://www.aspose.com/docs/display/cadjava/Home)
++ **Documentation:** [Aspose.CAD for Java Documentation](https://docs.aspose.com/display/cadjava/Home)
 + **Forum:** [Aspose.CAD for Java Forum](http://www.aspose.com/community/forums/aspose.cad-product-family/540/showforum.aspx)
-+ **Blog:** [Aspose.CAD for Java Blog](http://www.aspose.com/blogs/aspose-products/aspose.cad-product-family.html)
++ **Blog:** [Aspose.CAD for Java Blog](https://blog.aspose.com/category/aspose-products/aspose.cad-product-family/)

@@ -13,6 +13,6 @@ This repository contains Java Example Project for [Aspose.CAD for Java](http://w
 
 After you have downloaded the ZIP file from the [Download ZIP](https://github.com/aspose-cad/Aspose.CAD-for-Java/archive/master.zip) link above, please check the following link with detailed instructions on how to run these Source Code Examples.
 
-[How to Run the Examples](http://www.aspose.com/docs/display/cadjava/Home)
+[How to Run the Examples](https://docs.aspose.com/display/cadjava/How+to+Run+the+Examples)
 
 Please feel free to contact us if you have any question, issue or suggestion.

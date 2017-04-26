@@ -10,6 +10,7 @@ import com.aspose.cad.fileformats.cad.cadtables.CadBlockTableObject;
 
 public class SearchTextInDWGAutoCADFile {
 
+      ExStart:SearchTextInDWGAutoCADFile
 	private static final String dataDir = Utils.getDataDir(SearchTextInDWGAutoCADFile.class) + "DWGDrawings/";
 
 	public static void main(String[] args) {
@@ -90,4 +91,4 @@ public class SearchTextInDWGAutoCADFile {
     }
 }
 
-
+ExEnd:SearchTextInDWGAutoCADFile

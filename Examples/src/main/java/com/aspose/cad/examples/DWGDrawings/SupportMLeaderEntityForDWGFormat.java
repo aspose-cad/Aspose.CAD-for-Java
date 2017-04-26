@@ -60,6 +60,8 @@ public class SupportMLeaderEntityForDWGFormat {
             Assert.areEqual(cadMLeader.getLeaderLineColor(), 0);
             Assert.areEqual(cadMLeader.getTextHeight(), 1.0, 0.01);
         
+
 }
 }
 }
+          ExEnd:SupportMLeaderEntityForDWGFormat

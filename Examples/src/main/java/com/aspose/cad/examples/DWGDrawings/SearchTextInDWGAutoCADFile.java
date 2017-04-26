@@ -21,48 +21,73 @@ public class SearchTextInDWGAutoCADFile {
 	}
 
 	private static void searchTextInDWGAutoCADFile() {
-
-		// Load an existing DWG file as CadImage.
-		CadImage cadImage = (CadImage) CadImage.load(dataDir + "sample_file.dwg");
-
-		// Search for text in the file
-		for (CadBaseEntity entity : cadImage.getEntities()) {
-			// Please note that we iterate through CadText entities here, but some other entities
-			// may contain text also, e.g. CadMText and others
-			if (entity.getClass() == CadText.class) {
-				CadText text = (CadText) entity;
-				System.out.println(text.getDefaultValue());
-			}
-		}
-	}
-	
-	private static void searchForTextInSpecificLayout() {
-
-        	// Load an existing DWG file as CadImage.
-        	CadImage cadImage = (CadImage) CadImage.load(dataDir + "sample_file.dwg");
-        
-        	// get all layout names and link each layout with corresponding block with entities
-        	CadLayoutDictionary layouts = cadImage.getLayouts();
-        	String[] layoutNames = new String[layouts.size()];
-        	int i = 0;
-        
-        	for (com.aspose.cad.fileformats.cad.cadobjects.CadLayout layout : layouts.getValues()) {
-            		layoutNames[i++] = layout.getLayoutName();
-            		System.out.println("Layout " + layout.getLayoutName() + " is found");
-
-            		// find block, applicable for DWG only
-            		CadBlockTableObject blockTableObjectReference = null;
-            		for (CadBlockTableObject tableObject : cadImage.getBlocksTables()) {
-               			if (String.CASE_INSENSITIVE_ORDER.compare(tableObject.getHardPointerToLayout(), layout.getObjectHandle()) == 0) {
-                    			blockTableObjectReference = tableObject;
-                    			break;
-                		}
-            		}
-
-            		// Collection cadBlockEntity.Entities contains information about all entities on specific layout
-           	 	// if this collection has no elements it means layout is a copy of Model layout and contains the same entities
-            		// Below line of code is for reference
-            		CadBlockEntity cadBlockEntity = cadImage.getBlockEntities().get_Item(blockTableObjectReference.getBlockName());
-        	}
-	}
+      
+        // Load an existing DWG file as CadImage.
+       CadImage cadImage = (CadImage) CadImage.load(dataDir + "sample_file2.dwg");
+        // Search for text in the file
+        for (CadBaseEntity entity : cadImage.getEntities()) {
+	// Please, note: we iterate through CadText entities here, but some other entities may contain text also, e.g. CadMText and others
+             IterateCADNodes(entity);
+        }
 }
+	
+      public static void IterateCADNodes(CadBaseEntity obj)
+{
+    if (obj.getClass() == CadText.class)
+ 
+     {
+        CadText childObj = (CadText)obj;
+
+        if (childObj.getChildObjects().size() != 0)
+        {
+            for (CadBaseEntity tempobj : childObj.getChildObjects())
+            {
+                IterateCADNodes(tempobj);
+            }
+        }
+        else
+        {
+            System.out.println(childObj.getDefaultValue());
+        }
+    }
+    else   if (obj.getClass() == CadMText.class)
+    {
+        CadMText childObj = (CadMText)obj;
+
+        if (childObj.getChildObjects().size() != 0)
+        {
+            for (CadBaseEntity tempobj : childObj.getChildObjects())
+            {
+                IterateCADNodes(tempobj);
+            }
+        }                
+        else
+        {
+            System.out.println(childObj.getText());
+        }
+    }
+    else   if (obj.getClass() == CadInsertObject.class)
+    {
+        CadInsertObject childObj = (CadInsertObject)obj;
+        if (childObj.getChildObjects().size() != 0)
+        {
+            for (CadBaseEntity tempobj : childObj.getChildObjects())
+            {
+                IterateCADNodes(tempobj);
+            }
+        }
+        else
+        {
+            if (childObj.getTypeName() == CadEntityTypeName.ATTDEF)
+            {
+                System.out.println(((CadAttDef)((CadBaseEntity)childObj)).getDefaultString());
+            }
+            else if (childObj.getTypeName() == CadEntityTypeName.ATTRIB)
+            {
+                System.out.println(((CadAttrib)((CadBaseEntity)childObj)).getDefaultText());
+            }
+        }
+    }
+}
+
+

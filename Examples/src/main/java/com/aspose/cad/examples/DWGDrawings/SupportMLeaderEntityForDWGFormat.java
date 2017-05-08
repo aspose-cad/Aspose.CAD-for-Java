@@ -9,7 +9,9 @@ public class SupportMLeaderEntityForDWGFormat {
 	public static void main(String[] args) {
 		
 		// The path to the resource directory.
-        String dataDir = Utils.getDataDir(SupportMLeaderEntityForDWGFormat.class) + "DWGDrawings/";
+       
+             ExStart:SupportMLeaderEntityForDWGFormat
+         String dataDir = Utils.getDataDir(SupportMLeaderEntityForDWGFormat.class) + "DWGDrawings/";
 		
 	String file = "file path";
         Image image = Image.load(file);

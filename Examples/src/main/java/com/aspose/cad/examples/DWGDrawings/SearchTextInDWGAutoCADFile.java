@@ -21,74 +21,65 @@ public class SearchTextInDWGAutoCADFile {
 		searchForTextInSpecificLayout();
 	}
 
-	private static void searchTextInDWGAutoCADFile() {
-      
-        // Load an existing DWG file as CadImage.
-       CadImage cadImage = (CadImage) CadImage.load(dataDir + "sample_file2.dwg");
-        // Search for text in the file
-        for (CadBaseEntity entity : cadImage.getEntities()) {
-	// Please, note: we iterate through CadText entities here, but some other entities may contain text also, e.g. CadMText and others
-             IterateCADNodes(entity);
-        }
-}
-	
-      public static void IterateCADNodes(CadBaseEntity obj)
-{
-    if (obj.getClass() == CadText.class)
- 
+	public static void searchTextInDWGAutoCADFile() 
+{ 
+    String  dataDir="Test_Apsose.CAD\\";
+     // Load an existing DWG file as CadImage.
+     CadImage cadImage = (CadImage) CadImage.load(dataDir + "sample_file3.dwg");
+     for (CadBaseEntity entity : cadImage.getEntities()) 
      {
-        CadText childObj = (CadText)obj;
+       IterateCADNodeEntities(entity); 
+     } 
 
-        if (childObj.getChildObjects().size() != 0)
-        {
-            for (CadBaseEntity tempobj : childObj.getChildObjects())
-            {
-                IterateCADNodes(tempobj);
-            }
-        }
-        else
-        {
-            System.out.println(childObj.getDefaultValue());
-        }
-    }
-    else   if (obj.getClass() == CadMText.class)
-    {
-        CadMText childObj = (CadMText)obj;
+    // Search for text in the block section 
+    for (CadBlockEntity blockEntity : cadImage.getBlockEntities().getValues())
+    { 
+        for (CadBaseEntity entity : blockEntity.getEntities())
+        { 
+            IterateCADNodeEntities(entity); 
+        } 
+    } 
+} 
+//Recursive function to iterate nodes inside nodes
+private static void IterateCADNodeEntities(CadBaseEntity obj) 
+{ 
+    switch (obj.getTypeName())
+    { 
+        case CadEntityTypeName.TEXT: 
+            CadText childObjectText = (CadText) obj; 
 
-        if (childObj.getChildObjects().size() != 0)
-        {
-            for (CadBaseEntity tempobj : childObj.getChildObjects())
-            {
-                IterateCADNodes(tempobj);
-            }
-        }                
-        else
-        {
-            System.out.println(childObj.getText());
-        }
-    }
-    else   if (obj.getClass() == CadInsertObject.class)
-    {
-        CadInsertObject childObj = (CadInsertObject)obj;
-        if (childObj.getChildObjects().size() != 0)
-        {
-            for (CadBaseEntity tempobj : childObj.getChildObjects())
-            {
-                IterateCADNodes(tempobj);
-            }
-        }
-        else
-        {
-            if (childObj.getTypeName() == CadEntityTypeName.ATTDEF)
-            {
-                System.out.println(((CadAttDef)((CadBaseEntity)childObj)).getDefaultString());
-            }
-            else if (childObj.getTypeName() == CadEntityTypeName.ATTRIB)
-            {
-                System.out.println(((CadAttrib)((CadBaseEntity)childObj)).getDefaultText());
-            }
-        }
-    }
+            System.out.println(childObjectText.getDefaultValue()); 
+
+            break; 
+
+        case CadEntityTypeName.MTEXT: 
+            CadMText childObjectMText = (CadMText) obj; 
+
+            System.out.println(childObjectMText.getText()); 
+
+            break; 
+
+        case CadEntityTypeName.INSERT: 
+            CadInsertObject childInsertObject = (CadInsertObject) obj; 
+
+            for (CadBaseEntity tempobj : childInsertObject.getChildObjects())
+            { 
+                IterateCADNodes(tempobj); 
+            } 
+            break; 
+
+        case CadEntityTypeName.ATTDEF: 
+            CadAttDef attDef = (CadAttDef) obj; 
+
+            System.out.println(attDef.getDefaultString()); 
+            break; 
+
+        case CadEntityTypeName.ATTRIB: 
+            CadAttrib attAttrib = (CadAttrib) obj; 
+
+            System.out.println(attAttrib.getDefaultText()); 
+            break; 
+    } 
 }
 
 ExEnd:SearchTextInDWGAutoCADFile

@@ -8,7 +8,8 @@ package com.aspose.cad.examples.IFCDrawings;
 
 public class ExportIFCToPNG {
     
-String dataDir = Utils.getDataDir(ExportIFCToPNG.class) + "ExportingDGN/";
+//ExStart:ExportIFCToPNG
+String dataDir = Utils.getDataDir(ExportIFCToPNG.class) + "ExportingIFC/";
 String fileName = "example.ifc";
 IfcImage cadImage = (IfcImage)Image.load(fileName);
  
@@ -23,5 +24,5 @@ String outPath = fileName + ".png";
 cadImage.Save(outPath, pngOptions);
 
 
-
+//ExEnd:ExportIFCToPNG
 }

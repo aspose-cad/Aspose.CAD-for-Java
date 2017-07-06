@@ -7,6 +7,7 @@ package com.aspose.cad.examples.STLDrawings;
 
 public class ExportSTLToPNG {
     
+//ExStart:ExportSTLToPNG
 String dataDir = Utils.getDataDir(ExportSTLToPNG.class) + "ExportingSTL/";
 String fileName = "example.stl";
  
@@ -21,4 +22,5 @@ pngOptions.setVectorRasterizationOptions(rasterizationOptions);
 String outPath = "galeon.stl.png";
 cadImage.save(outPath, pngOptions);
 
+//ExEnd:ExportSTLToPNG
 }

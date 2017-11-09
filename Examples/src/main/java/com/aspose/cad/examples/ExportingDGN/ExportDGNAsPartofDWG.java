@@ -35,7 +35,9 @@ public class ExportDGNAsPartofDWG
         vectorRasterizationOptions.setPageHeight(1600);
         vectorRasterizationOptions.setCenterDrawing(true);
         vectorRasterizationOptions.setLayouts(new String[] { "Model" });
-        vectorRasterizationOptions.setScaleMethod(com.aspose.cad.fileformats.cad.ScaleType.None);
+        vectorRasterizationOptions.setAutomaticLayoutsScaling(false);
+        vectorRasterizationOptions.setNoScaling(true);
+      
         vectorRasterizationOptions.setBackgroundColor(com.aspose.cad.Color.getBlack());
         vectorRasterizationOptions.setDrawType(com.aspose.cad.fileformats.cad.CadDrawTypeMode.UseObjectColor);
 

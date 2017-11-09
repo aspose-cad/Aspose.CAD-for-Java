@@ -17,7 +17,7 @@ public class SubstituteFont {
 		CadImage cadImage = (CadImage) Image.load(srcFile);
 
 		// Iterate over the items of CadStylesDictionary
-		for (CadStyleTableObject style : cadImage.getStyles().getValuesTyped()) {
+		for (CadStyleTableObject style : cadImage.getStyles()) {
 			// Set the font name
 			style.setPrimaryFontName("Arial");
 		}

@@ -26,7 +26,8 @@ public class ExportingDGNAutoCADFormatToPDF {
 		rasterizationOptions.setPageWidth(600);
 		rasterizationOptions.setPageHeight(300);
 		rasterizationOptions.setCenterDrawing(true);
-		rasterizationOptions.setAutomaticLayoutsScaling(false);
+		rasterizationOptions.setNoScaling(true);
+                rasterizationOptions.setAutomaticLayoutsScaling(false);
 
 		options.setVectorRasterizationOptions(rasterizationOptions);
 		

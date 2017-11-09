@@ -28,8 +28,9 @@ public class ExportCADLayoutsToPDF {
 
 		// Set the Entities type property to Entities3D.
 		rasterizationOptions.setTypeOfEntities(TypeOfEntities.Entities3D);
-
-		rasterizationOptions.setScaleMethod(ScaleType.GrowToFit);
+                rasterizationOptions.setAutomaticLayoutsScaling(true);
+                rasterizationOptions.setNoScaling (false);
+		//rasterizationOptions.setScaleMethod(ScaleType.GrowToFit);
 		rasterizationOptions.setContentAsBitmap(true);
 
 		// Set Layouts

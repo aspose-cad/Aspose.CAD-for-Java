@@ -22,7 +22,10 @@ public class SetCanvasSizeAndMode {
 	    CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
 	    rasterizationOptions.setPageWidth(1600);
 	    rasterizationOptions.setPageHeight(1600);
-	    rasterizationOptions.setScaleMethod(ScaleType.GrowToFit);
+            
+            rasterizationOptions.setAutomaticLayoutsScaling(true); 
+	    
+            rasterizationOptions.setScaleMethod(ScaleType.NoScaling);
 
 	    // Create an instance of PdfOptions
 	    PdfOptions pdfOptions = new PdfOptions();

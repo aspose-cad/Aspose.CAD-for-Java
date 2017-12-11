@@ -1,6 +1,6 @@
 ## Aspose.CAD for Java Examples
 
-This repository contains Java Example Project for [Aspose.CAD for Java](https://www.aspose.com/products/cad/java) which will help you learn Aspose.CAD for Java and write your own applications.
+This repository contains Java Example Project for [Aspose.CAD for Java](https://products.aspose.com/cad/java) which will help you learn Aspose.CAD for Java and write your own applications.
 
 <p align="center">
   <a title="Download Examples ZIP" href="https://github.com/aspose-cad/Aspose.CAD-for-Java/archive/master.zip">

@@ -1,8 +1,8 @@
 ## Aspose.CAD for Java
 
-[Aspose.CAD for Java](https://www.aspose.com/products/cad/java) allows developers to convert AutoCAD DWG and DXF files to PDF and Raster images. It is a native API and does not require AutoCAD or any other software to be installed. You can also convert the selected layers and layouts from the AutoCAD files. The conversion to PDF and Raster images is of very high quality.
+[Aspose.CAD for Java](https://products.aspose.com/cad/java) allows developers to convert AutoCAD DWG and DXF files to PDF and Raster images. It is a native API and does not require AutoCAD or any other software to be installed. You can also convert the selected layers and layouts from the AutoCAD files. The conversion to PDF and Raster images is of very high quality.
 
-This repository contains [Examples](Examples), Plugins and Showcases for [Aspose.CAD for Java](https://www.aspose.com/products/cad/java) to help you learn and write your own applications.
+This repository contains [Examples](Examples), Plugins and Showcases for [Aspose.CAD for Java](https://products.aspose.com/cad/java) to help you learn and write your own applications.
 
 <p align="center">
 
@@ -18,7 +18,7 @@ Directory | Description
 ## Resources
 
 + **Website:** [www.aspose.com](http://www.aspose.com)
-+ **Product Home:** [Aspose.CAD for Java](https://www.aspose.com/products/cad/java)
++ **Product Home:** [Aspose.CAD for Java](https://products.aspose.com/cad/java)
 + **Download:** [Download Aspose.CAD for Java](https://downloads.aspose.com/cad/java)
 + **Documentation:** [Aspose.CAD for Java Documentation](https://docs.aspose.com/display/cadjava/Home)
 + **Forum:** [Aspose.CAD for Java Forum](https://forum.aspose.com/c/cad)

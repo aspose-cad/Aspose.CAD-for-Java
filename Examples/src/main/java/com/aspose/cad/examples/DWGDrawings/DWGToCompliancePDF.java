@@ -2,6 +2,8 @@ package com.aspose.cad.examples.DWGDrawings;
 import com.aspose.cad.Image;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
+import com.aspose.cad.imageoptions.PdfCompliance;
+import com.aspose.cad.imageoptions.PdfDocumentOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
 
 public class DWGToCompliancePDF {
@@ -13,8 +15,8 @@ public class DWGToCompliancePDF {
 	    //ExStart:DWGToCompliancePDF
          	String srcFile = dataDir + "visualization_-_conference_room.dwg";
        		
-		CadImage cadImage = (CadImage)Image.load(GetFileFromDesktop("example.dxf"));
-        
+	
+            com.aspose.cad.Image objImage = com.aspose.cad.Image.load("example.dxf");
            // Create an instance of PdfOptions
             PdfOptions pdfOptions = new PdfOptions();
             pdfOptions.setVectorRasterizationOptions(new CadRasterizationOptions());
@@ -22,10 +24,10 @@ public class DWGToCompliancePDF {
             pdfOptions.setCorePdfOptions(new PdfDocumentOptions());
 
             pdfOptions.getCorePdfOptions().setCompliance(PdfCompliance.PdfA1a);
-            cadImage.save(outPath, pdfOptions);
+            objImage.save(dataDir, pdfOptions);
 
             pdfOptions.getCorePdfOptions().setCompliance(PdfCompliance.PdfA1b);
-            cadImage.save(outPath, pdfOptions);
+            objImage.save(dataDir, pdfOptions);
 	   //ExEnd:DWGToCompliancePDF
         }
 

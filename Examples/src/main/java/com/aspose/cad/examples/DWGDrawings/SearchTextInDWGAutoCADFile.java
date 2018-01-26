@@ -3,14 +3,19 @@ package com.aspose.cad.examples.DWGDrawings;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.cad.CadImage;
 import com.aspose.cad.fileformats.cad.CadLayoutDictionary;
+import com.aspose.cad.fileformats.cad.cadconsts.CadEntityTypeName;
 import com.aspose.cad.fileformats.cad.cadobjects.CadBaseEntity;
 import com.aspose.cad.fileformats.cad.cadobjects.CadBlockEntity;
+import com.aspose.cad.fileformats.cad.cadobjects.CadInsertObject;
+import com.aspose.cad.fileformats.cad.cadobjects.CadMText;
 import com.aspose.cad.fileformats.cad.cadobjects.CadText;
+import com.aspose.cad.fileformats.cad.cadobjects.attentities.CadAttDef;
+import com.aspose.cad.fileformats.cad.cadobjects.attentities.CadAttrib;
 import com.aspose.cad.fileformats.cad.cadtables.CadBlockTableObject;
 
 public class SearchTextInDWGAutoCADFile {
 
-      ExStart:SearchTextInDWGAutoCADFile
+      //ExStart:SearchTextInDWGAutoCADFile
 	private static final String dataDir = Utils.getDataDir(SearchTextInDWGAutoCADFile.class) + "DWGDrawings/";
 
 	public static void main(String[] args) {
@@ -82,4 +87,13 @@ private static void IterateCADNodeEntities(CadBaseEntity obj)
     } 
 }
 
-ExEnd:SearchTextInDWGAutoCADFile
+    private static void searchForTextInSpecificLayout() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static void IterateCADNodes(CadBaseEntity tempobj) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
+
+//ExEnd:SearchTextInDWGAutoCADFile

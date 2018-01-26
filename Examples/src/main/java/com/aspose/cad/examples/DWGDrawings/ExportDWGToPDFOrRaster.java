@@ -3,6 +3,7 @@ import com.aspose.cad.Image;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
+import com.aspose.cad.imageoptions.UnitType;
 
 public class ExportDWGToPDFOrRaster {
 
@@ -13,8 +14,9 @@ public class ExportDWGToPDFOrRaster {
 	    //ExStart:ExportDWGToPDFOrRaster
          	String srcFile = dataDir + "visualization_-_conference_room.dwg";
        		
-		CadImage cadImage = (CadImage)Image.load(GetFileFromDesktop("example.dxf"));
-        
+
+                  com.aspose.cad.Image objImage = com.aspose.cad.Image.load("example.dxf");
+                
                  Boolean currentUnitIsMetric = IsMetric(image.getUnitType());
                 double currentUnitCoefficient = Coefficient(image.getUnitType());
         
@@ -22,6 +24,7 @@ public class ExportDWGToPDFOrRaster {
             {
                double metersCoeff = 1 / 1000.0;
                double scaleFactor = metersCoeff / currentUnitCoefficient;
+             
                vectorOptions.setPageWidth((float)(210 * scaleFactor));
                vectorOptions.setPageHeight((float)(297 * scaleFactor));
                vectorOptions.setUnitType(UnitType.Millimeter);
@@ -34,8 +37,8 @@ public class ExportDWGToPDFOrRaster {
             }
 
 
-         private Boolean IsMetric(int initial)
-{
+         public Boolean IsMetric(int initial)
+         {
             Boolean isMetric = true;
 		 
             switch (initial)
@@ -126,4 +129,4 @@ private Double Coefficient(int unitType)
 	   //ExEnd:ExportDWGToPDFOrRaster
         }
 
-    }
+    

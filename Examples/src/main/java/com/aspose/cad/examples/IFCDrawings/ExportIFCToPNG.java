@@ -5,6 +5,12 @@
  */
 package com.aspose.cad.examples.IFCDrawings;
 
+import com.aspose.cad.Image;
+import com.aspose.cad.examples.Utils.Utils;
+import com.aspose.cad.fileformats.ifc.IfcImage;
+import com.aspose.cad.imageoptions.IfcRasterizationOptions;
+import com.aspose.cad.imageoptions.PngOptions;
+
 
 public class ExportIFCToPNG {
     
@@ -21,7 +27,7 @@ rasterizationOptions.setPageHeight(100);
 PngOptions pngOptions = new PngOptions();
 pngOptions.setVectorRasterizationOptions(rasterizationOptions);
 String outPath = fileName + ".png";
-cadImage.Save(outPath, pngOptions);
+cadImage.save(dataDir, pngOptions);
 
 
 //ExEnd:ExportIFCToPNG

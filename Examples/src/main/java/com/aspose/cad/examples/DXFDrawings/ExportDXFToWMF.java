@@ -3,8 +3,10 @@ package com.aspose.cad.examples.DXFDrawings;
 import com.aspose.cad.Color;
 import com.aspose.cad.Image;
 import com.aspose.cad.examples.Utils.Utils;
+import com.aspose.cad.fileformats.ifc.IfcImage;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
+import com.aspose.cad.imageoptions.WmfOptions;
 
 public class ExportDXFToWMF {
 
@@ -17,7 +19,7 @@ public class ExportDXFToWMF {
 		
 		Image image = Image.load(srcFile);
 		
-	        IfcImage cadImage = (IfcImage)Image.load(GetFileFromDesktop("example.ifc"));
+	        IfcImage cadImage = (IfcImage)Image.load(("example.ifc"));
             try
             {
               {
@@ -36,7 +38,7 @@ public class ExportDXFToWMF {
           }
 
 	    // Export the DXF to PDF
-	    image.save(dataDir + "conic_pyramid_out_.pdf", pdfOptions);                	
+	    image.save(dataDir + "conic_pyramid_out_.pdf", PdfOptions);                	
 	}
 	//ExEnd:ExportDXFToWMF
 }

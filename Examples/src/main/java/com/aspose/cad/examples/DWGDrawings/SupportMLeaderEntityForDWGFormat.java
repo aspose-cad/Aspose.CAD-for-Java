@@ -1,6 +1,8 @@
 package com.aspose.cad.examples.DWGDrawings;
 import com.aspose.cad.Image;
 import com.aspose.cad.examples.Utils.Utils;
+import com.aspose.cad.fileformats.cad.CadImage;
+import com.aspose.cad.fileformats.cad.cadobjects.CadMLeader;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
 
@@ -10,7 +12,7 @@ public class SupportMLeaderEntityForDWGFormat {
 		
 		// The path to the resource directory.
        
-             ExStart:SupportMLeaderEntityForDWGFormat
+             //ExStart:SupportMLeaderEntityForDWGFormat
          String dataDir = Utils.getDataDir(SupportMLeaderEntityForDWGFormat.class) + "DWGDrawings/";
 		
 	String file = "file path";
@@ -19,7 +21,7 @@ public class SupportMLeaderEntityForDWGFormat {
             // Test
             CadImage cadImage = (CadImage)image;
 
-            Assert.areNotEqual(cadImage.getEntities().length, 0);
+           Assert.areNotEqual(cadImage.getEntities().length, 0);
             CadMLeader cadMLeader = (CadMLeader)cadImage.getEntities()[0];
 
             Assert.areEqual(cadMLeader.getStyleDescription(), "Standard");
@@ -66,4 +68,4 @@ public class SupportMLeaderEntityForDWGFormat {
 }
 }
 }
-          ExEnd:SupportMLeaderEntityForDWGFormat
+         //ExEnd:SupportMLeaderEntityForDWGFormat

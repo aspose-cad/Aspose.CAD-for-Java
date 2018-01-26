@@ -1,6 +1,6 @@
 package com.aspose.cad.examples.CADConversion;
 
-import com.aspose.cad.Image;
+import java.awt.Image;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.cad.CadImage;
 import com.aspose.cad.fileformats.cad.cadtables.CadStyleTableObject;
@@ -15,10 +15,10 @@ public class ReadingDWT {
 		String srcFile = dataDir + "conic_pyramid.dxf";
 		
 		// Load a CAD drawing  in an instance of CadImage
-		CadImage cadImage = (CadImage) Image.load(srcFile);
-
+		//CadImage cadImage = (CadImage) Image.load(srcFile);
+               com.aspose.cad.Image objImage = com.aspose.cad.Image.load("sourceFilePath");
 		// Iterate over the items of CadStylesDictionary
-		for (CadStyleTableObject style : cadImage.getStyles()) {
+		for (CadStyleTableObject style : objImage.getStyles()) {
 			// Set the font name
 			style.setPrimaryFontName("Arial");
         	//ExEnd:ReadingDWT	

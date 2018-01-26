@@ -5,6 +5,12 @@
  */
 package com.aspose.cad.examples.STLDrawings;
 
+import com.aspose.cad.Image;
+import com.aspose.cad.examples.Utils.Utils;
+import com.aspose.cad.fileformats.cad.CadImage;
+import com.aspose.cad.imageoptions.CadRasterizationOptions;
+import com.aspose.cad.imageoptions.PngOptions;
+
 public class ExportSTLToPNG {
     
 //ExStart:ExportSTLToPNG
@@ -20,7 +26,7 @@ rasterizationOptions.setPageHeight(100);
 PngOptions pngOptions = new PngOptions();
 pngOptions.setVectorRasterizationOptions(rasterizationOptions);
 String outPath = "galeon.stl.png";
-cadImage.save(outPath, pngOptions);
+cadImage.save(dataDir"", pngOptions);
 
 //ExEnd:ExportSTLToPNG
 }

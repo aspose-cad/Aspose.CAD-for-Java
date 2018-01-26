@@ -14,11 +14,11 @@ public class ExportToPDF {
 
 	public static void main(String[] args) {
 		
-		ExStart:ExportToPDF
+		//ExStart:ExportToPDF
                  // The path to the resource directory.
 		String dataDir = Utils.getDataDir(ExportToPDF.class) + "ExportingCAD/";
 		
-        String fileName = getFileFromDesktop("APFH Floor Plan.dwf");
+        String fileName = ("APFH Floor Plan.dwf");
         com.aspose.cad.Image image = com.aspose.cad.Image.load(fileName);
         {
             PdfOptions pdfOptions = new PdfOptions();
@@ -33,6 +33,6 @@ public class ExportToPDF {
             image.save(outPath, pdfOptions);
         }		
 
-	 ExEnd:ExportToPDF
+	 //ExEnd:ExportToPDF
 }
 }

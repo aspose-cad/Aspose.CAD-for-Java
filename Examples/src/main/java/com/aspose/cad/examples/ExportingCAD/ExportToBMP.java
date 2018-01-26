@@ -6,6 +6,7 @@ import com.aspose.cad.SmoothingMode;
 import com.aspose.cad.TextRenderingHint;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.cad.ScaleType;
+import com.aspose.cad.imageoptions.BmpOptions;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
 import com.aspose.cad.imageoptions.TypeOfEntities;
@@ -14,10 +15,10 @@ public class ExportToBMP {
 
 	public static void main(String[] args) {
 		
-		ExStart:ExportToBMP
+		//ExStart:ExportToBMP
                  // The path to the resource directory.
 		String dataDir = Utils.getDataDir(ExportToBMP.class) + "ExportingCAD/";
-                String fileName = getFileFromDesktop("APFH Floor Plan.dwf");
+                String fileName = ("APFH Floor Plan.dwf");
                
             com.aspose.cad.Image image = com.aspose.cad.Image.load(fileName);
         {
@@ -32,7 +33,7 @@ public class ExportToBMP {
             String outPath = fileName + ".bmp";
             image.save(outPath, bmpOptions);
           }		
-	 ExEnd:ExportToBMP
+	 //ExEnd:ExportToBMP
 
 }
 }

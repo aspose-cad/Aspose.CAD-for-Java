@@ -1,11 +1,6 @@
 package com.aspose.cad.examples.ApplyLicense;
 
-import com.aspose.cad.Image;
-import com.aspose.cad.examples.Utils.Utils;
-import com.aspose.cad.fileformats.cad.CadImage;
-import com.aspose.cad.fileformats.cad.cadtables.CadLayerTable;
-import com.aspose.cad.imageoptions.CadRasterizationOptions;
-import com.aspose.cad.imageoptions.JpegOptions;
+import java.math.BigDecimal;
 
 public class MeteredLicensing 
 {
@@ -20,7 +15,7 @@ public class MeteredLicensing
         metered.setMeteredKey("<valid pablic key>", "<valid private key>");
         
         // Get consumed qantity value before accessing API
-        double quantityOld = com.aspose.cad.Metered.getConsumptionQuantity();
+            BigDecimal quantityOld = com.aspose.cad.Metered.getConsumptionQuantity();
         System.out.println("Consumption quantity" + quantityOld);
 
         // DO PROCESSING
@@ -29,10 +24,14 @@ public class MeteredLicensing
         
         
         // Get consumed qantity value after accessing API
-        double quantity = com.aspose.cad.Metered.getConsumptionQuantity();
+            BigDecimal quantity = com.aspose.cad.Metered.getConsumptionQuantity();
         System.out.println("Consumption quantity" + quantity());
 		
 
 	}
+
+    private static String quantity() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

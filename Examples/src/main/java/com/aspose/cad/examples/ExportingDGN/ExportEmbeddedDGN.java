@@ -20,7 +20,7 @@ public class ExportEmbeddedDGN
        //ExStart:ExportEmbeddedDGN    
        	String dataDir = Utils.getDataDir(ExportEmbeddedDGN.class) + "ExportingDGN/";
 		
-       using (CadImage cadImage = (CadImage)Image.Load(fileName))
+       using (CadImage cadImage = (CadImage)Image.Load(fileName);
      {
        CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
        rasterizationOptions.Layouts = new[] { "Model" };

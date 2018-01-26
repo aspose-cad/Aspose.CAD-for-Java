@@ -30,9 +30,11 @@ public class ConvertAllCADLayersToSeparateImages {
 		
 		// Get the layers in an instance of CadLayersDictionary. 
 		// Iterate over the layers
-		for (CadLayerTable layer : image.getLayers().getValuesTyped()) {
+		for (String layer : image.getLayers().getLayersNames());
+                        //getValuesTyped()) 
+                        {
 			// Display layer name for tracking
-			System.out.println("Start with " + layer.getName());
+			System.out.println("Start with " +layer.getName());
 			
 			// Add the layer name to the CadRasterizationOptions's layer list
 			rasterizationOptions.getLayers().add(layer.getName());

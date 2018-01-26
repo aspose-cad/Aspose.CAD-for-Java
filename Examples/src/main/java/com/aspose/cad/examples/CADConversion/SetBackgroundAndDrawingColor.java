@@ -1,7 +1,7 @@
 package com.aspose.cad.examples.CADConversion;
 
-import com.aspose.cad.Color;
-import com.aspose.cad.Image;
+import java.awt.Color;
+import java.awt.Image;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.cad.CadDrawTypeMode;
 import com.aspose.cad.fileformats.tiff.enums.TiffExpectedFormat;
@@ -17,8 +17,8 @@ public class SetBackgroundAndDrawingColor {
 		String dataDir = Utils.getDataDir(SetBackgroundAndDrawingColor.class) + "CADConversion/";
 		String srcFile = dataDir + "conic_pyramid.dxf";
 		
-		Image image = Image.load(srcFile);
-		
+	//	Image image = Image.load(srcFile);
+	    com.aspose.cad.Image objImage = com.aspose.cad.Image.load("sourceFilePath");	
 	    // Create an instance of CadRasterizationOptions and set its various properties
 	    CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
 	    rasterizationOptions.setPageWidth(1600);

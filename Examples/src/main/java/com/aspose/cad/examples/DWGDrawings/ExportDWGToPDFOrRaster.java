@@ -17,28 +17,33 @@ public class ExportDWGToPDFOrRaster {
 
                   com.aspose.cad.Image objImage = com.aspose.cad.Image.load("example.dxf");
                 
-                 Boolean currentUnitIsMetric = IsMetric(image.getUnitType());
-                double currentUnitCoefficient = Coefficient(image.getUnitType());
-        
+                 Boolean currentUnitIsMetric = IsMetric(objImage.getUnitType());
+                      
+                Double currentUnitCoefficient = Coefficient(objImage.getUnitType());
+                       // getUnitType());
+                 
                if (currentUnitIsMetric)
             {
                double metersCoeff = 1 / 1000.0;
                double scaleFactor = metersCoeff / currentUnitCoefficient;
-             
-               vectorOptions.setPageWidth((float)(210 * scaleFactor));
-               vectorOptions.setPageHeight((float)(297 * scaleFactor));
-               vectorOptions.setUnitType(UnitType.Millimeter);
+             CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
+               rasterizationOptions.setPageWidth((float)(210 * scaleFactor));
+               rasterizationOptions.setPageHeight((float)(297 * scaleFactor));
+               rasterizationOptions.setUnitType(UnitType.Millimeter);
            }
         else
            {
-              vectorOptions.setPageWidth((float)(8.27f / currentUnitCoefficient));
-              vectorOptions.setPageHeight((float)(11.69f / currentUnitCoefficient));
-              vectorOptions.setUnitType(UnitType.Inch);
+               
+              CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
+              rasterizationOptions.setPageWidth((float)(8.27f / currentUnitCoefficient));
+              rasterizationOptions.setPageHeight((float)(11.69f / currentUnitCoefficient));
+              rasterizationOptions.setUnitType(UnitType.Inch);
             }
 
 
-         public Boolean IsMetric(int initial)
-         {
+
+         public static Boolean IsMetric(int initial){
+         
             Boolean isMetric = true;
 		 
             switch (initial)
@@ -52,7 +57,7 @@ public class ExportDWGToPDFOrRaster {
           case UnitType.Unitless:
           isMetric = false;
 }
-		 
+         	 
 return isMetric;
 }
 	 

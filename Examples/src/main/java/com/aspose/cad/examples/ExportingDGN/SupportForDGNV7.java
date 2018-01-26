@@ -1,15 +1,15 @@
 package com.aspose.cad.examples.ExportingDGN;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
+import com.aspose.cad.Color;
 
-import com.aspose.cad.Image;
-import com.aspose.cad.ImageOptionsBase;
+import java.awt.Image;
+import com.aspose.cad.imageoptions.CadRasterizationOptions;
+import com.aspose.cad.imageoptions.PdfOptions;
+import com.aspose.cad.fileformats.dgn.DgnElementType;
+import com.aspose.cad.fileformats.dgn.DgnImage;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.dgn.DgnImage;
-import com.aspose.cad.imageoptions.DgnRasterizationOptions;
-import com.aspose.cad.imageoptions.JpegOptions;
+import com.aspose.cad.fileformats.dgn.dgnelements.DgnDrawingElementBase;
 
 public class SupportForDGNV7 
 {
@@ -19,20 +19,18 @@ public class SupportForDGNV7
         String fileName = "BlockRefDgn.dwg";
        //ExStart:SupportForDGNV7     
        	String dataDir = Utils.getDataDir(SupportForDGNV7 .class) + "ExportingDGN/";
-		
-       DgnImage dgnImage = (DgnImage)Image.load(file);
+		//String file="F:\\Aspose Work\\";
+    	DgnImage dgnImage = (DgnImage)Image.load(fileName);
+        
         {
             PdfOptions options = new PdfOptions();
             CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
-            vectorOptions.setPageWidth(1500);
-            vectorOptions.setPageHeight(1500);
-            vectorOptions.setCenterDrawing(true);
             vectorOptions.setAutomaticLayoutsScaling(true);
             vectorOptions.setBackgroundColor(Color.getBlack());
             vectorOptions.setLayouts(new String[] { "1", "2", "3", "9" });//only export 4 (1,2,3 and 9) views
             options.setVectorRasterizationOptions(vectorOptions);
 
-            dgnImage.save(outFile, options);
+            dgnImage.save(dataDir, options);
         }
       //ExEnd:SupportForDGNV7 
     }

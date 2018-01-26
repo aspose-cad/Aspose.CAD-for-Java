@@ -15,9 +15,7 @@ public class SetCanvasSizeAndMode {
 		// The path to the resource directory.
 		String dataDir = Utils.getDataDir(SetCanvasSizeAndMode.class) + "CADConversion/";
 		String srcFile = dataDir + "conic_pyramid.dxf";
-		
-	
-		    com.aspose.cad.Image objImage = com.aspose.cad.Image.load(srcFile);
+	    com.aspose.cad.Image objImage = com.aspose.cad.Image.load(srcFile);
 	    // Create an instance of CadRasterizationOptions and set its various properties
 	    CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
 	    rasterizationOptions.setPageWidth(1600);
@@ -25,7 +23,7 @@ public class SetCanvasSizeAndMode {
             
             rasterizationOptions.setAutomaticLayoutsScaling(true); 
 	    
-            rasterizationOptions.setScaleMethod(ScaleType.NoScaling);
+            rasterizationOptions.isNoScaling();
 
 	    // Create an instance of PdfOptions
 	    PdfOptions pdfOptions = new PdfOptions();
@@ -34,7 +32,7 @@ public class SetCanvasSizeAndMode {
 	    pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
 
 	    // Export CAD to PDF
-	    image.save("result_out_.pdf", pdfOptions);
+	    objImage.save("result_out_.pdf", pdfOptions);
 
 	    // Create an instance of TiffOptions
 	    TiffOptions tiffOptions = new TiffOptions(TiffExpectedFormat.Default);
@@ -43,7 +41,7 @@ public class SetCanvasSizeAndMode {
 	    tiffOptions.setVectorRasterizationOptions(rasterizationOptions);
 
 	    // Export CAD to TIFF
-	    image.save(dataDir + "result_out_.tiff", tiffOptions);
+	    objImage.save(dataDir + "result_out_.tiff", tiffOptions);
 		
 	}
 

@@ -28,17 +28,19 @@ public class ExportDXFToWMF {
                 rasterizationOptions.setPageWidth(100);
                 rasterizationOptions.setPageHeight(100);
                 WmfOptions wmfOptions = new WmfOptions();
-                WmfOptions.setVectorRasterizationOptions(rasterizationOptions);
+              
                 cadImage.save("example.ifc.wmf", wmfOptions);
             }
           }
           finally
           {
             cadImage.dispose();
+          
           }
 
 	    // Export the DXF to PDF
-	    image.save(dataDir + "conic_pyramid_out_.pdf", PdfOptions);                	
+	    image.save(dataDir + "conic_pyramid_out_.pdf");                	
 	}
 	//ExEnd:ExportDXFToWMF
 }
+

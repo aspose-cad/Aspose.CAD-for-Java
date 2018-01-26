@@ -1,5 +1,11 @@
 package com.aspose.cad.examples.ExportingDGN;
 
+import com.aspose.cad.Image;
+import com.aspose.cad.examples.Utils.Utils;
+import com.aspose.cad.fileformats.dgn.DgnElementType;
+import com.aspose.cad.fileformats.dgn.DgnImage;
+import com.aspose.cad.fileformats.dgn.dgnelements.DgnDrawingElementBase;
+
 
 
 public class SupportedDGNElements
@@ -12,7 +18,7 @@ public class SupportedDGNElements
         String outPath = "BlockRefDgn.dwg.pdf";
        //ExStart:SupportedDGNElements
         String dataDir = Utils.getDataDir(SupportedDGNElements.class) + "ExportingDGN/";
-        DgnImage dgnImage = (DgnImage)Image.load(file);
+        DgnImage dgnImage = (DgnImage)Image.load(dataDir);
         {
             for (DgnDrawingElementBase element : dgnImage.getElements())
             {

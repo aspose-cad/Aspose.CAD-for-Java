@@ -8,6 +8,7 @@ import com.aspose.cad.Image;
 import com.aspose.cad.ImageOptionsBase;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.dgn.DgnImage;
+import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.DgnRasterizationOptions;
 import com.aspose.cad.imageoptions.JpegOptions;
 
@@ -25,14 +26,15 @@ public class ExportingDGNAutoCADFormatToRasterImageFormat {
 
 		// Create an object of JpegOptions class as we are converting the DGN to JPEG and assign DgnRasterizationOptions object to it.
 		ImageOptionsBase options = new JpegOptions();
+	  CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
+            vectorOptions.setPageWidth(600);
+            vectorOptions.setPageHeight(400);
+            vectorOptions.setCenterDrawing(true);
+               vectorOptions.setNoScaling(true);
+	
+                vectorOptions.setAutomaticLayoutsScaling(false);
 
-		rasterizationOptions.setPageWidth(600);
-		rasterizationOptions.setPageHeight(400);
-		rasterizationOptions.setCenterDrawing(true);
-		rasterizationOptions.setNoScaling(true);
-                rasterizationOptions.setAutomaticLayoutsScaling(false);
-
-		options.setVectorRasterizationOptions(rasterizationOptions);
+		options.setVectorRasterizationOptions(vectorOptions);
 		
 		OutputStream outStream = new FileOutputStream(dataDir + "ExportDGNToRasterImage_Out.jpg");
 		

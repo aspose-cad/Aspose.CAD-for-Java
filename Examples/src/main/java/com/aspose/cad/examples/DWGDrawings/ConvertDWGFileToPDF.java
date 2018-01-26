@@ -4,6 +4,7 @@ import com.aspose.cad.*;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
+import java.awt.Image;
 
 public class ConvertDWGFileToPDF {
 
@@ -12,7 +13,7 @@ public class ConvertDWGFileToPDF {
 		String dataDir = Utils.getDataDir(ConvertDWGFileToPDF.class) + "DWGDrawings/";
 		String srcFile = dataDir + "Bottom_plate.dwg";
 		
-		Image image = Image.load(srcFile);
+		 com.aspose.cad.Image objImage = com.aspose.cad.Image.load(srcFile);
 		
 	    // Create an instance of CadRasterizationOptions and set its various properties
 		CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
@@ -26,7 +27,7 @@ public class ConvertDWGFileToPDF {
 	    pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
 	    
 	    // Export the DWG to PDF
-	    image.save(dataDir + "Bottom_plate_out_.pdf", pdfOptions);
+	    objImage.save(dataDir + "Bottom_plate_out_.pdf", pdfOptions);
 	}
 	
 }

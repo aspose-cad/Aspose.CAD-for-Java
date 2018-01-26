@@ -33,7 +33,7 @@ public class SetBackgroundAndDrawingColor {
 	    pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
 
 	    // Export CAD to PDF
-	    image.save("result_out_.pdf", pdfOptions);
+	    objImage.save("result_out_.pdf", pdfOptions);
 
 	    // Create an instance of TiffOptions
 	    TiffOptions tiffOptions = new TiffOptions(TiffExpectedFormat.Default);
@@ -42,7 +42,7 @@ public class SetBackgroundAndDrawingColor {
 	    tiffOptions.setVectorRasterizationOptions(rasterizationOptions);
 
 	    // Export CAD to TIFF
-	    image.save(dataDir + "result_out_.tiff", tiffOptions);
+	    objImage.save(dataDir + "result_out_.tiff", tiffOptions);
 		
 	}
 }

@@ -24,6 +24,8 @@ rasterizationOptions.setCenterDrawing(true);
 rasterizationOptions.setPageWidth(100);
 rasterizationOptions.setPageHeight(100);
  
+
+
 PngOptions pngOptions = new PngOptions();
 pngOptions.setVectorRasterizationOptions(rasterizationOptions);
 String outPath = fileName + ".png";

@@ -22,12 +22,12 @@ public class ExportToPDF {
         com.aspose.cad.Image image = com.aspose.cad.Image.load(fileName);
         {
             PdfOptions pdfOptions = new PdfOptions();
-            DwfRasterizationOptions cadRasterizationOptions = new DwfRasterizationOptions();
-            pdfOptions.setVectorRasterizationOptions(cadRasterizationOptions);
-            cadRasterizationOptions.setCenterDrawing(true);
-            cadRasterizationOptions.setPageHeight(500);
-            cadRasterizationOptions.setPageWidth(500);
-            cadRasterizationOptions.setLayouts(new String[] { "Model" });
+            CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
+            pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
+            rasterizationOptions.setCenterDrawing(true);
+            rasterizationOptions.setPageHeight(500);
+            rasterizationOptions.setPageWidth(500);
+            rasterizationOptions.setLayouts(new String[] { "Model" });
             // export
             String outPath = fileName + ".pdf";
             image.save(outPath, pdfOptions);

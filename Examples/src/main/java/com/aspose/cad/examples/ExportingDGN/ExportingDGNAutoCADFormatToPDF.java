@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import com.aspose.cad.Image;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.dgn.DgnImage;
+import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.DgnRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
 
@@ -23,13 +24,15 @@ public class ExportingDGNAutoCADFormatToPDF {
 
 		// Create an object of CadRasterizationOptions class and define/set different properties
 		PdfOptions options = new PdfOptions();
-		rasterizationOptions.setPageWidth(600);
-		rasterizationOptions.setPageHeight(300);
-		rasterizationOptions.setCenterDrawing(true);
-		rasterizationOptions.setNoScaling(true);
-                rasterizationOptions.setAutomaticLayoutsScaling(false);
+		  CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
+            vectorOptions.setPageWidth(1500);
+            vectorOptions.setPageHeight(1500);
+            vectorOptions.setCenterDrawing(true);
+               vectorOptions.setNoScaling(true);
+             
+                vectorOptions.setAutomaticLayoutsScaling(false);
 
-		options.setVectorRasterizationOptions(rasterizationOptions);
+		options.setVectorRasterizationOptions(vectorOptions);
 		
 		OutputStream outStream = new FileOutputStream(dataDir + "ExportDGNToPdf_Out.pdf");
 		

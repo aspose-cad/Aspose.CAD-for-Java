@@ -23,12 +23,13 @@ public class ExportToBMP {
             com.aspose.cad.Image image = com.aspose.cad.Image.load(fileName);
         {
             BmpOptions bmpOptions = new BmpOptions();
-            DwfRasterizationOptions cadRasterizationOptions = new DwfRasterizationOptions();
-            bmpOptions.setVectorRasterizationOptions(cadRasterizationOptions);
-            cadRasterizationOptions.setCenterDrawing(true);
-            cadRasterizationOptions.setPageHeight(500);
-            cadRasterizationOptions.setPageWidth(500);
-            cadRasterizationOptions.setLayouts(new String[] { "Model" });
+           
+            CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
+            bmpOptions.setVectorRasterizationOptions(rasterizationOptions);
+            rasterizationOptions.setCenterDrawing(true);
+            rasterizationOptions.setPageHeight(500);
+            rasterizationOptions.setPageWidth(500);
+            rasterizationOptions.setLayouts(new String[] { "Model" });
             // export
             String outPath = fileName + ".bmp";
             image.save(outPath, bmpOptions);

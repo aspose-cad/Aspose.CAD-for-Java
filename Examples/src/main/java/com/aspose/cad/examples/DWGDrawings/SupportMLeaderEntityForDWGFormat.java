@@ -3,6 +3,7 @@ import com.aspose.cad.Image;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.cad.CadImage;
 import com.aspose.cad.fileformats.cad.cadobjects.CadMLeader;
+import com.aspose.cad.fileformats.cad.cadobjects.CadMLeaderContextData;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
 

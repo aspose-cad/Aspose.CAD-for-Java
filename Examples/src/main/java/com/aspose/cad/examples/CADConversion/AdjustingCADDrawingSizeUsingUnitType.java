@@ -16,7 +16,8 @@ public class AdjustingCADDrawingSizeUsingUnitType
         String sourceFilePath = "sample.dwg";
             
         // Load a CAD drawing in an instance of Image
-        com.aspose.cad.Image objImage = com.aspose.cad.Image.load("sourceFilePath");
+      Image image = Image.load(sourceFilePath);
+		
         
         // Create an instance of BmpOptions class
         com.aspose.cad.imageoptions.BmpOptions bmpOptions = new com.aspose.cad.imageoptions.BmpOptions();
@@ -36,7 +37,7 @@ public class AdjustingCADDrawingSizeUsingUnitType
                 
         // Export layout to BMP format
         String outPath = sourceFilePath + ".bmp";
-        objImage.save(outPath, bmpOptions);
+        image.save(outPath, bmpOptions);
     }
 
 }

@@ -19,7 +19,7 @@ Directory | Description
 
 + **Website:** [www.aspose.com](http://www.aspose.com)
 + **Product Home:** [Aspose.CAD for Java](https://products.aspose.com/cad/java)
-+ **Download:** [Download Aspose.CAD for Java](https://downloads.aspose.com/cad/java)
++ **Download:** [Download Aspose.CAD for Java](http://maven.aspose.com/repository/simple/ext-release-local/com/aspose/aspose-cad/)
 + **Documentation:** [Aspose.CAD for Java Documentation](https://docs.aspose.com/display/cadjava/Home)
 + **Forum:** [Aspose.CAD for Java Forum](https://forum.aspose.com/c/cad)
 + **Blog:** [Aspose.CAD for Java Blog](https://blog.aspose.com/category/aspose-products/aspose.cad-product-family/)

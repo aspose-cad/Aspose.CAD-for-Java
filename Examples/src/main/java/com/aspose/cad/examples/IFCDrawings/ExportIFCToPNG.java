@@ -8,29 +8,28 @@ package com.aspose.cad.examples.IFCDrawings;
 import com.aspose.cad.Image;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.ifc.IfcImage;
+import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.IfcRasterizationOptions;
 import com.aspose.cad.imageoptions.PngOptions;
 
 
 public class ExportIFCToPNG {
-    
+     public static void main(String[] args){
 //ExStart:ExportIFCToPNG
 String dataDir = Utils.getDataDir(ExportIFCToPNG.class) + "ExportingIFC/";
 String fileName = "example.ifc";
 IfcImage cadImage = (IfcImage)Image.load(fileName);
  
-IfcRasterizationOptions rasterizationOptions = new IfcRasterizationOptions();
-rasterizationOptions.setCenterDrawing(true);
-rasterizationOptions.setPageWidth(100);
-rasterizationOptions.setPageHeight(100);
- 
-
-
+ CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
+ vectorOptions.setPageWidth(1500);
+ vectorOptions.setPageHeight(1500);
+ vectorOptions.setCenterDrawing(true);
 PngOptions pngOptions = new PngOptions();
-pngOptions.setVectorRasterizationOptions(rasterizationOptions);
+pngOptions.setVectorRasterizationOptions(vectorOptions);
 String outPath = fileName + ".png";
 cadImage.save(dataDir, pngOptions);
 
 
 //ExEnd:ExportIFCToPNG
+}
 }

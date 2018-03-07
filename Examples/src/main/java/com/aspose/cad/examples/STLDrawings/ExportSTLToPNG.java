@@ -15,7 +15,7 @@ import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PngOptions;
 
 public class ExportSTLToPNG {
-    
+    public static void main(String[] args){
 //ExStart:ExportSTLToPNG
 String dataDir = Utils.getDataDir(ExportSTLToPNG.class) + "ExportingSTL/";
 String fileName = "example.stl";
@@ -23,22 +23,14 @@ String fileName = "example.stl";
 CadImage cadImage = (CadImage)Image.load(fileName);
   //CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
  CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
-        
-      vectorOptions.
- //   vectorOptions.setPageWidth(1500);
-           // vectorOptions.setPageHeight(1500);
-            //vectorOptions.setCenterDrawing(true);
-
-//CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
-//rasterizationOptions
-//rasterizationOptions.setCenterDrawing(true);
-//rasterizationOptions.setPageWidth(100);
-//rasterizationOptions.setPageHeight(100);
- 
-PngOptions pngOptions = new PngOptions();
+ vectorOptions.setPageWidth(1500);
+ vectorOptions.setPageHeight(1500);
+ vectorOptions.setCenterDrawing(true);
+ PngOptions pngOptions = new PngOptions();
 //pngOptions.setVectorRasterizationOptions(rasterizationOptions);
 String outPath = "galeon.stl.png";
 cadImage.save(dataDir, pngOptions);
 
 //ExEnd:ExportSTLToPNG
+}
 }

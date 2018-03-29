@@ -1,6 +1,7 @@
 package com.aspose.cad.examples.CADConversion;
 
 import com.aspose.cad.Image;
+import com.aspose.cad.examples.DWGDrawings.ExportSpecificDWGLayoutToPDF;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.JpegOptions;
@@ -10,7 +11,10 @@ public class ConvertCADLayerToRasterImageFormat {
 	public static void main(String[] args) {
 		
 		// The path to the resource directory.
-		String dataDir = Utils.getDataDir(ConvertCADLayerToRasterImageFormat.class) + "CADConversion/";
+	        String dataDir = Utils.getDataDir(ExportSpecificDWGLayoutToPDF.class) + "DWGDrawings/";
+		String srcFile = dataDir + "visualization_-_conference_room.dwg";
+                
+                String dataDir = Utils.getDataDir(ConvertCADLayerToRasterImageFormat.class) + "CADConversion/";
 		String srcFile = dataDir + "conic_pyramid.dxf";
 		
 		// Load a CAD drawing in an instance of Image

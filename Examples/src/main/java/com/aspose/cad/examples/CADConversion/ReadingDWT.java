@@ -16,11 +16,12 @@ public class ReadingDWT {
 		
 		// Load a CAD drawing  in an instance of CadImage
 		//CadImage cadImage = (CadImage) Image.load(srcFile);
-               com.aspose.cad.Image objImage = com.aspose.cad.Image.load("sourceFilePath");
-		// Iterate over the items of CadStylesDictionary
+             //  com.aspose.cad.Image objImage = com.aspose.cad.Image.load("sourceFilePath");
+		
+                  // Iterate over the items of CadStylesDictionary
 		for (CadStyleTableObject style : objImage.getStyles()) {
-			// Set the font name
-			style.setPrimaryFontName("Arial");
+		
+                    style.setPrimaryFontName("Arial");
         	//ExEnd:ReadingDWT	
           }
 	}

@@ -42,7 +42,8 @@ public class ExportDWGToPDFOrRaster {
 
 
 
-         public static Boolean IsMetric(int initial){
+         public static Boolean IsMetric(int initial)
+         {
          
             Boolean isMetric = true;
 		 

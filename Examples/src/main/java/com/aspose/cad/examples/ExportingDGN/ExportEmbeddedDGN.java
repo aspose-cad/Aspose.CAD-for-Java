@@ -22,15 +22,17 @@ public class ExportEmbeddedDGN
        //ExStart:ExportEmbeddedDGN    
        	String dataDir = Utils.getDataDir(ExportEmbeddedDGN.class) + "ExportingDGN/";
 		
-     com.aspose.cad.Image objImage = com.aspose.cad.Image.load(fileName);
+    com.aspose.cad.Image objImage = com.aspose.cad.Image.load(fileName);
      {
        CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
-       rasterizationOptions.getLayouts()
-               Layouts = new[]{"Model"};
+       rasterizationOptions.setLayouts(new String[] {"Model"});
        PdfOptions pdfOptions = new PdfOptions();
-       pdfOptions.getVectorRasterizationOptions();
+       pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
       objImage.save(dataDir + fileName + ".pdf", pdfOptions);
-        }
+        
+        
+ 
         }
       //ExEnd:ExportEmbeddedDGN
     }
+}

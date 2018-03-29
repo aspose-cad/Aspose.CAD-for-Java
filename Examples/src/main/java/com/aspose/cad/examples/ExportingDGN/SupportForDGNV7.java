@@ -20,8 +20,8 @@ public class SupportForDGNV7
        //ExStart:SupportForDGNV7     
        	String dataDir = Utils.getDataDir(SupportForDGNV7 .class) + "ExportingDGN/";
 		//String file="F:\\Aspose Work\\";
-    	DgnImage dgnImage = (DgnImage)Image.load(fileName);
-        
+    	  com.aspose.cad.Image objImage = com.aspose.cad.Image.load(fileName);
+                
         {
             PdfOptions options = new PdfOptions();
             CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
@@ -30,7 +30,7 @@ public class SupportForDGNV7
             vectorOptions.setLayouts(new String[] { "1", "2", "3", "9" });//only export 4 (1,2,3 and 9) views
             options.setVectorRasterizationOptions(vectorOptions);
 
-            dgnImage.save(dataDir, options);
+            objImage.save(dataDir, options);
         }
       //ExEnd:SupportForDGNV7 
     }

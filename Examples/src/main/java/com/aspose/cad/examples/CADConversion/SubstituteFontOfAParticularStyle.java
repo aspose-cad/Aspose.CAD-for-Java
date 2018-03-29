@@ -16,6 +16,8 @@ public class SubstituteFontOfAParticularStyle {
 		CadImage cadImage = (CadImage)Image.load(srcFile);
 		
 		// Specify the font for one particular style
-		cadImage.getStyles().get_Item("Roman").setPrimaryFontName("Arial");
-	}
+		
+                        cadImage.getStyles().get_Item(0).setPrimaryFontName("Arial");
+	
+        }
 }

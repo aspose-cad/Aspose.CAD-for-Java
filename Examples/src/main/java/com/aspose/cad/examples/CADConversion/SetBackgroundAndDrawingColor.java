@@ -23,9 +23,10 @@ public class SetBackgroundAndDrawingColor {
 	    CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
 	    rasterizationOptions.setPageWidth(1600);
 	    rasterizationOptions.setPageHeight(1600);
-	    rasterizationOptions.setBackgroundColor(Color.getBeige());
+	    rasterizationOptions.setBackgroundColor(com.aspose.cad.Color.getBeige());
 	    rasterizationOptions.setDrawType(CadDrawTypeMode.UseDrawColor);
-	    rasterizationOptions.setDrawColor(Color.getBlue());
+	    rasterizationOptions.setBackgroundColor(com.aspose.cad.Color.getBlue());
+     
 
 	    // Create an instance of PdfOptions
 	    PdfOptions pdfOptions = new PdfOptions();

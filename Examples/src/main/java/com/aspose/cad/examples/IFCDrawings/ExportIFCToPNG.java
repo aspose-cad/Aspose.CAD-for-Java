@@ -9,7 +9,6 @@ import com.aspose.cad.Image;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.ifc.IfcImage;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
-import com.aspose.cad.imageoptions.IfcRasterizationOptions;
 import com.aspose.cad.imageoptions.PngOptions;
 
 

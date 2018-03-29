@@ -4,6 +4,8 @@ import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.cad.CadImage;
 import com.aspose.cad.fileformats.cad.cadobjects.CadMLeader;
 import com.aspose.cad.fileformats.cad.cadobjects.CadMLeaderContextData;
+import com.aspose.cad.fileformats.cad.cadobjects.CadMLeaderLine;
+import com.aspose.cad.fileformats.cad.cadobjects.CadMLeaderNode;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
 
@@ -36,7 +38,7 @@ public class SupportMLeaderEntityForDWGFormat {
             Assert.areEqual(context.getBasePoint().getX(), 481, 1);
             Assert.areEqual(context.getContentScale(), 1.0, 0.01);
             Assert.areEqual(context.getDefaultText().getValue(), "This is multileader with huge text\\P{\\H1.5x;6666666666666666666666666666\\P}bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
-            Assert.areEqual(context.hasMText(), true);
+            Assert.areEqual(context.hasMText());
 
             CadMLeaderNode mleaderNode = context.getLeaderNode();
 

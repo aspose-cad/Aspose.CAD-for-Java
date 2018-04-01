@@ -8,12 +8,13 @@ public class ExportSpecificDWGLayoutToPDF {
 
 	public static void main(String[] args) {
 		
-		// The path to the resource directory.
-		String dataDir = Utils.getDataDir(ExportSpecificDWGLayoutToPDF.class) + "DWGDrawings/";
-		String srcFile = dataDir + "visualization_-_conference_room.dwg";
-		
-		Image image = Image.load(srcFile);
-		
+            // The path to the resource directory.
+            String dataDir = Utils.getDataDir(ExportSpecificDWGLayoutToPDF.class) + "DWGDrawings/";
+        //ExStart:ExportSpecificDWGLayoutToPDF
+            String srcFile = dataDir + "visualization_-_conference_room.dwg";
+
+            Image image = Image.load(srcFile);
+
 	    // Create an instance of CadRasterizationOptions and set its various properties
 	    CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
 	    rasterizationOptions.setPageWidth(1600);
@@ -28,5 +29,6 @@ public class ExportSpecificDWGLayoutToPDF {
 
 	    // Export the DWG to PDF
 	    image.save(dataDir + "ExportSpecificLayoutToPDF_out_.pdf", pdfOptions);	
-	}
+	//ExEnd:ExportSpecificDWGLayoutToPDF
+        }
 }

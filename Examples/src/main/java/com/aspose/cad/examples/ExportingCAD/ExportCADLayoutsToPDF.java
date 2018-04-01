@@ -5,7 +5,6 @@ import com.aspose.cad.InterpolationMode;
 import com.aspose.cad.SmoothingMode;
 import com.aspose.cad.TextRenderingHint;
 import com.aspose.cad.examples.Utils.Utils;
-import com.aspose.cad.fileformats.cad.ScaleType;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
 import com.aspose.cad.imageoptions.TypeOfEntities;
@@ -16,7 +15,8 @@ public class ExportCADLayoutsToPDF {
 		
 		// The path to the resource directory.
 		String dataDir = Utils.getDataDir(ExportCADLayoutsToPDF.class) + "ExportingCAD/";
-		String srcFile = dataDir + "conic_pyramid.dxf";
+		//ExStart:ExportCADLayoutsToPDF
+                String srcFile = dataDir + "conic_pyramid.dxf";
 		
 		// Create an instance of CadImage class and load the file.
 		Image cadImage = Image.load(srcFile);
@@ -47,5 +47,6 @@ public class ExportCADLayoutsToPDF {
 
 		// Export to PDF by calling the Save method
 		cadImage.save(dataDir + "CADLayoutsToPDF_out_.pdf", pdfOptions);
+                //ExEnd:ExportCADLayoutsToPDF
 	}
 }

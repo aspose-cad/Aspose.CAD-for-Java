@@ -8,12 +8,12 @@ public class RenderDWGDocument {
 
 	public static void main(String[] args) {
 		
-		// The path to the resource directory.
-		String dataDir = Utils.getDataDir(RenderDWGDocument.class) + "DWGDrawings/";
+            // The path to the resource directory.
+            String dataDir = Utils.getDataDir(RenderDWGDocument.class) + "DWGDrawings/";
 	    //ExStart:RenderDWGDocument
-         	String srcFile = dataDir + "visualization_-_conference_room.dwg";
+            String srcFile = dataDir + "visualization_-_conference_room.dwg";
        		
-		Image image = Image.load(srcFile);
+            Image image = Image.load(srcFile);
 		
 	    // Create an instance of CadRasterizationOptions and set its various properties
 	    CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
@@ -29,6 +29,7 @@ public class RenderDWGDocument {
 
 	    // Export the DWG to PDF
 	    image.save(dataDir + "ExportSpecificLayoutToPDF_out_.pdf", pdfOptions);	
-	//ExEnd:RenderDWGDocument
+            
+            //ExEnd:RenderDWGDocument
        }
 }

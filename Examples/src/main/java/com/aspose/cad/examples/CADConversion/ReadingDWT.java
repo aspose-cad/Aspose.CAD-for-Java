@@ -3,6 +3,8 @@ package com.aspose.cad.examples.CADConversion;
 import java.awt.Image;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.cad.CadImage;
+import com.aspose.cad.fileformats.cad.cadobjects.CadBaseEntity;
+import com.aspose.cad.fileformats.cad.cadobjects.acadtable.CadTableEntity;
 import com.aspose.cad.fileformats.cad.cadtables.CadStyleTableObject;
 
 public class ReadingDWT {
@@ -16,13 +18,14 @@ public class ReadingDWT {
 		
 		// Load a CAD drawing  in an instance of CadImage
 		//CadImage cadImage = (CadImage) Image.load(srcFile);
-             //  com.aspose.cad.Image objImage = com.aspose.cad.Image.load("sourceFilePath");
-		
-                  // Iterate over the items of CadStylesDictionary
-		for (CadStyleTableObject style : objImage.getStyles()) {
-		
-                    style.setPrimaryFontName("Arial");
-        	//ExEnd:ReadingDWT	
-          }
+               com.aspose.cad.fileformats.cad.CadImage objImage =(CadImage) com.aspose.cad.Image.load("sourceFilePath");
+                       
+                for(Object style : objImage.getStyles())
+                {
+                    // Set the font name
+                    ((com.aspose.cad.fileformats.cad.cadtables.CadStyleTableObject)style).setPrimaryFontName("Arial");
+                }
+
+                //ExEnd:ReadingDWT
 	}
 }

@@ -12,7 +12,8 @@ public class ExportDXFDrawingToPDF {
 		
 		// The path to the resource directory.
 		String dataDir = Utils.getDataDir(ExportDXFDrawingToPDF.class) + "DXFDrawings/";
-		String srcFile = dataDir + "conic_pyramid.dxf";
+		//ExStart:ExportDXFDrawingToPDF
+                String srcFile = dataDir + "conic_pyramid.dxf";
 		
 		Image image = Image.load(srcFile);
 		
@@ -28,7 +29,8 @@ public class ExportDXFDrawingToPDF {
 	    pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
 
 	    // Export the DXF to PDF
-	    image.save(dataDir + "conic_pyramid_out_.pdf", pdfOptions);                	
+	    image.save(dataDir + "conic_pyramid_out_.pdf", pdfOptions);    
+            //ExEnd:ExportDXFDrawingToPDF
 	}
 	
 }

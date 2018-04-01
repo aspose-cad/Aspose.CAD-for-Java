@@ -11,11 +11,12 @@ public class ConvertCADLayerToRasterImageFormat {
 	public static void main(String[] args) {
 		
 		// The path to the resource directory.
-	        String dataDir = Utils.getDataDir(ExportSpecificDWGLayoutToPDF.class) + "DWGDrawings/";
-		String srcFile = dataDir + "visualization_-_conference_room.dwg";
+	        //String dataDir = Utils.getDataDir(ExportSpecificDWGLayoutToPDF.class) + "DWGDrawings/";
+		//String srcFile = dataDir + "visualization_-_conference_room.dwg";
                 
                 String dataDir = Utils.getDataDir(ConvertCADLayerToRasterImageFormat.class) + "CADConversion/";
-		String srcFile = dataDir + "conic_pyramid.dxf";
+	//ExStart:ConvertCADLayerToRasterImageFormat
+        	String srcFile = dataDir + "conic_pyramid.dxf";
 		
 		// Load a CAD drawing in an instance of Image
 		Image image = Image.load(srcFile);
@@ -38,6 +39,6 @@ public class ConvertCADLayerToRasterImageFormat {
 		options.setVectorRasterizationOptions(rasterizationOptions);
 		// Export each layer to JPEG format
 		image.save(dataDir + "CADLayersToRasterImageFormats_out_.jpg", options);
-
+//ExEnd:ConvertCADLayerToRasterImageFormat
 	}
 }

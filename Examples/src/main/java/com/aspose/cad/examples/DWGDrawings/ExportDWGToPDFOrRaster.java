@@ -6,40 +6,44 @@ import com.aspose.cad.imageoptions.PdfOptions;
 import com.aspose.cad.imageoptions.UnitType;
 
 public class ExportDWGToPDFOrRaster {
-
-	public static void main(String[] args) {
-		
-		// The path to the resource directory.
-		String dataDir = Utils.getDataDir(ExportDWGToPDFOrRaster.class) + "DWGDrawings/";
 	    //ExStart:ExportDWGToPDFOrRaster
-         	String srcFile = dataDir + "visualization_-_conference_room.dwg";
-       		
 
-                  com.aspose.cad.Image objImage = com.aspose.cad.Image.load("example.dxf");
-                
-                 Boolean currentUnitIsMetric = IsMetric(objImage.getUnitType());
-                      
-                Double currentUnitCoefficient = Coefficient(objImage.getUnitType());
-                       // getUnitType());
-                 
-               if (currentUnitIsMetric)
+	public static void main(String[] args) 
+        {
+		
+            // The path to the resource directory.
+	
+            String dataDir = Utils.getDataDir(ExportDWGToPDFOrRaster.class) + "DWGDrawings/";
+         	
+            String srcFile = dataDir + "visualization_-_conference_room.dwg";
+       
+            com.aspose.cad.Image objImage = com.aspose.cad.Image.load("example.dxf");
+            Boolean currentUnitIsMetric = IsMetric(objImage.getUnitType());
+            int currentUnitCoefficient = objImage.getUnitType();
+            
+            if (currentUnitIsMetric)
             {
-               double metersCoeff = 1 / 1000.0;
-               double scaleFactor = metersCoeff / currentUnitCoefficient;
-             CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
-               rasterizationOptions.setPageWidth((float)(210 * scaleFactor));
-               rasterizationOptions.setPageHeight((float)(297 * scaleFactor));
-               rasterizationOptions.setUnitType(UnitType.Millimeter);
-           }
-        else
-           {
-               
-              CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
-              rasterizationOptions.setPageWidth((float)(8.27f / currentUnitCoefficient));
-              rasterizationOptions.setPageHeight((float)(11.69f / currentUnitCoefficient));
-              rasterizationOptions.setUnitType(UnitType.Inch);
+                double metersCoeff = 1 / 1000.0;
+                double scaleFactor = metersCoeff / currentUnitCoefficient;
+                CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
+                rasterizationOptions.setPageWidth((float)(210 * scaleFactor));
+                rasterizationOptions.setPageHeight((float)(297 * scaleFactor));
+                rasterizationOptions.setUnitType(UnitType.Millimeter);
             }
+            else
+            {
 
+                CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
+                rasterizationOptions.setPageWidth((float)(8.27f / currentUnitCoefficient));
+                rasterizationOptions.setPageHeight((float)(11.69f / currentUnitCoefficient));
+                rasterizationOptions.setUnitType(UnitType.Inch);
+            }
+            
+            PdfOptions pdfOptions = new PdfOptions();
+            pdfOptions.setVectorRasterizationOptions(new CadRasterizationOptions());
+            objImage.save(dataDir+"Saved.pdf", pdfOptions);
+
+        }
 
 
          public static Boolean IsMetric(int initial)
@@ -132,7 +136,9 @@ private Double Coefficient(int unitType)
          
          return coefficient;
         }
-	   //ExEnd:ExportDWGToPDFOrRaster
-        }
+
+//ExEnd:ExportDWGToPDFOrRaster
+        
+}
 
     

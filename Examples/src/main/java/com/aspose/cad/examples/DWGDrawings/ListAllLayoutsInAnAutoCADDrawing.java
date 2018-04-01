@@ -10,17 +10,21 @@ public class ListAllLayoutsInAnAutoCADDrawing {
 	public static void main(String[] args) {
 		
 		// The path to the resource directory.
-		String dataDir = Utils.getDataDir(ListAllLayoutsInAnAutoCADDrawing.class) + "DWGDrawings/";
-		String srcFile = dataDir + "conic_pyramid.dxf";
-		
-		Image image = Image.load(srcFile);
+            String dataDir = Utils.getDataDir(ListAllLayoutsInAnAutoCADDrawing.class) + "DWGDrawings/";
+            //ExStart:ListAllLayoutsInAnAutoCADDrawing
+            String srcFile = dataDir + "conic_pyramid.dxf";
+
+            Image image = Image.load(srcFile);
 		
 	    CadImage cadImage = (CadImage)image;
 
 	    CadLayoutDictionary layouts = cadImage.getLayouts();
-	    for (CadLayout layout : layouts.getValues()) {
+	    for (CadLayout layout : layouts.getValues())
+            {
 	        System.out.println("Layout " + layout.getLayoutName());
 	    }
+            
+            //ExEnd:ListAllLayoutsInAnAutoCADDrawing
 	}
 
 }

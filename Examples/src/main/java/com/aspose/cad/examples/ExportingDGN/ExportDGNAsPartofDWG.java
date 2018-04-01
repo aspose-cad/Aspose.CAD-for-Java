@@ -6,6 +6,7 @@ public class ExportDGNAsPartofDWG
 {
     public static void main(String[] args)
     {
+        //ExStart:ExportDGNAsPartofDWG
         // Input and Output file paths
         String fileName = "BlockRefDgn.dwg";
         String outPath = "BlockRefDgn.dwg.pdf";
@@ -47,5 +48,7 @@ public class ExportDGNAsPartofDWG
         // Export the DWG to PDF by calling Save method
         cadImage.save(outPath, exportOptions);
 
+        //ExEnd:ExportDGNAsPartofDWG
+        
     }
 }

@@ -18,21 +18,18 @@ public class ExportEmbeddedDGN
     public static void main(String[] args)
     {
         // Input and Output file paths
+       //ExStart:ExportEmbeddedDGN
         String fileName = "BlockRefDgn.dwg";
-       //ExStart:ExportEmbeddedDGN    
        	String dataDir = Utils.getDataDir(ExportEmbeddedDGN.class) + "ExportingDGN/";
 		
-    com.aspose.cad.Image objImage = com.aspose.cad.Image.load(fileName);
-     {
-       CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
-       rasterizationOptions.setLayouts(new String[] {"Model"});
-       PdfOptions pdfOptions = new PdfOptions();
-       pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
-      objImage.save(dataDir + fileName + ".pdf", pdfOptions);
-        
-        
- 
-        }
-      //ExEnd:ExportEmbeddedDGN
+        com.aspose.cad.Image objImage = com.aspose.cad.Image.load(fileName);
+         {
+           CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
+           rasterizationOptions.setLayouts(new String[] {"Model"});
+           PdfOptions pdfOptions = new PdfOptions();
+           pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
+          objImage.save(dataDir + fileName + ".pdf", pdfOptions);
+          }
+       //ExEnd:ExportEmbeddedDGN
     }
 }

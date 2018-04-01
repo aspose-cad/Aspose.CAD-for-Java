@@ -10,10 +10,11 @@ public class ExportSpecificDXFLayoutToPDF {
 	public static void main(String[] args) {
 		
 		// The path to the resource directory.
-		String dataDir = Utils.getDataDir(ExportSpecificDXFLayoutToPDF.class) + "DXFDrawings/";
-		String srcFile = dataDir + "conic_pyramid.dxf";
+            String dataDir = Utils.getDataDir(ExportSpecificDXFLayoutToPDF.class) + "DXFDrawings/";
+            //ExStart:ExportSpecificDXFLayoutToPDF
+            String srcFile = dataDir + "conic_pyramid.dxf";
 		
-		Image image = Image.load(srcFile); 
+            Image image = Image.load(srcFile); 
 	    
 		// Create an instance of CadRasterizationOptions and set its various properties
 	    CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
@@ -29,5 +30,6 @@ public class ExportSpecificDXFLayoutToPDF {
 
 	    // Export the DXF to PDF
 	    image.save(dataDir + "conic_pyramid_layout_out_.pdf", pdfOptions);
+            //ExEnd:ExportSpecificDXFLayoutToPDF
 	}
 }

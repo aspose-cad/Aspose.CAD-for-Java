@@ -11,6 +11,7 @@ public class AdjustingCADDrawingSizeUsingUnitType
 
     public static void main(String[] args) 
     {
+       //ExStart:AdjustingCADDrawingSizeUsingUnitType
 
         // Path to source file
         String sourceFilePath = "sample.dwg";
@@ -38,6 +39,8 @@ public class AdjustingCADDrawingSizeUsingUnitType
         // Export layout to BMP format
         String outPath = sourceFilePath + ".bmp";
         image.save(outPath, bmpOptions);
+    //ExEnd:AdjustingCADDrawingSizeUsingUnitType
     }
+    
 
 }

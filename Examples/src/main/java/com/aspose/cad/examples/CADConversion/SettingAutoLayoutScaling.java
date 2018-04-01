@@ -11,7 +11,8 @@ public class SettingAutoLayoutScaling {
 		
 		// The path to the resource directory.
 		String dataDir = Utils.getDataDir(SettingAutoLayoutScaling.class) + "CADConversion/";
-		String srcFile = dataDir + "conic_pyramid.dxf";
+		//ExStart:SettingAutoLayoutScaling
+                String srcFile = dataDir + "conic_pyramid.dxf";
 		
 		Image image = Image.load(srcFile);
 		
@@ -29,7 +30,8 @@ public class SettingAutoLayoutScaling {
 	    pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
 	    
 	    // Export the CAD to PDF
-	    image.save(dataDir + "result_out_.pdf", pdfOptions);	
+	    image.save(dataDir + "result_out_.pdf", pdfOptions);
+            //ExEnd:SettingAutoLayoutScaling
 	}
 
 }

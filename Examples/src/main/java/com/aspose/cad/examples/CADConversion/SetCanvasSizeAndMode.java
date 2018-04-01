@@ -2,7 +2,6 @@ package com.aspose.cad.examples.CADConversion;
 
 import java.awt.Image;
 import com.aspose.cad.examples.Utils.Utils;
-import com.aspose.cad.fileformats.cad.ScaleType;
 import com.aspose.cad.fileformats.tiff.enums.TiffExpectedFormat;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
@@ -14,7 +13,8 @@ public class SetCanvasSizeAndMode {
 		
 		// The path to the resource directory.
 		String dataDir = Utils.getDataDir(SetCanvasSizeAndMode.class) + "CADConversion/";
-		String srcFile = dataDir + "conic_pyramid.dxf";
+		//ExStart:SetCanvasSizeAndMode	
+                String srcFile = dataDir + "conic_pyramid.dxf";
 	    com.aspose.cad.Image objImage = com.aspose.cad.Image.load(srcFile);
 	    // Create an instance of CadRasterizationOptions and set its various properties
 	    CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
@@ -42,7 +42,7 @@ public class SetCanvasSizeAndMode {
 
 	    // Export CAD to TIFF
 	    objImage.save(dataDir + "result_out_.tiff", tiffOptions);
-		
+		//ExEnd:SetCanvasSizeAndMode
 	}
 
 }

@@ -13,7 +13,8 @@ public class ConvertAllCADLayersToSeparateImages {
 		
 		// The path to the resource directory.
 		String dataDir = Utils.getDataDir(ConvertAllCADLayersToSeparateImages.class) + "CADConversion/";
-		String srcFile = dataDir + "conic_pyramid.dxf";
+//ExStart:ConvertAllCADLayersToSeparateImages
+                String srcFile = dataDir + "conic_pyramid.dxf";
 		
 		// Load a CAD drawing in an instance of CadImage
 		CadImage image = (CadImage) Image.load(srcFile);
@@ -30,23 +31,22 @@ public class ConvertAllCADLayersToSeparateImages {
 		
 		// Get the layers in an instance of CadLayersDictionary. 
 		// Iterate over the layers
-		for (String layer : image.getLayers().getLayersNames());
-                        //getValuesTyped()) 
-                        {
-			// Display layer name for tracking
-			System.out.println("Start with " +layer.getName());
-			
-			// Add the layer name to the CadRasterizationOptions's layer list
-			rasterizationOptions.getLayers().add(layer.getName());
+		for (String layer : image.getLayers().getLayersNames())
+                {
+                    // Display layer name for tracking
+                    System.out.println("Start with " +layer);
 
-			// Create an instance of JpegOptions (or any ImageOptions for raster formats)
-			JpegOptions options = new JpegOptions();
-			// Set VectorRasterizationOptions property to the instance of CadRasterizationOptions
-			options.setVectorRasterizationOptions(rasterizationOptions);
-			// Export each layer to JPEG format
-			image.save(dataDir + layer.getName() + "_out_.jpg", options);
+                    // Add the layer name to the CadRasterizationOptions's layer list
+                    rasterizationOptions.getLayers().add(layer);
+
+                    // Create an instance of JpegOptions (or any ImageOptions for raster formats)
+                    JpegOptions options = new JpegOptions();
+                    // Set VectorRasterizationOptions property to the instance of CadRasterizationOptions
+                    options.setVectorRasterizationOptions(rasterizationOptions);
+                    // Export each layer to JPEG format
+                    image.save(dataDir + layer + "_out_.jpg", options);
 		}
-
+//ExEnd:ConvertAllCADLayersToSeparateImages
 	}
 
 }

@@ -7,12 +7,10 @@ public class MeteredLicensing
 
 	public static void main(String[] args) 
         {
-		
-		// Create an instance of OCR Metered class
-        com.aspose.cad.Metered metered = new com.aspose.cad.Metered();
+		//ExStart:MeteredLicensing
 
         // Access the setMeteredKey property and pass public and private keys as parameters
-        metered.setMeteredKey("<valid pablic key>", "<valid private key>");
+        com.aspose.cad.Metered.setMeteredKey("<valid pablic key>", "<valid private key>");
         
         // Get consumed qantity value before accessing API
             BigDecimal quantityOld = com.aspose.cad.Metered.getConsumptionQuantity();
@@ -27,7 +25,7 @@ public class MeteredLicensing
             BigDecimal quantity = com.aspose.cad.Metered.getConsumptionQuantity();
         System.out.println("Consumption quantity" + quantity());
 		
-
+//ExEnd:MeteredLicensing
 	}
 
     private static String quantity() {

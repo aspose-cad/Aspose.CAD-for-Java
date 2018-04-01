@@ -15,7 +15,8 @@ public class SetBackgroundAndDrawingColor {
 		
 		// The path to the resource directory.
 		String dataDir = Utils.getDataDir(SetBackgroundAndDrawingColor.class) + "CADConversion/";
-		String srcFile = dataDir + "conic_pyramid.dxf";
+		//ExStart:SetBackgroundAndDrawingColor
+                String srcFile = dataDir + "conic_pyramid.dxf";
 		
 	//	Image image = Image.load(srcFile);
 	    com.aspose.cad.Image objImage = com.aspose.cad.Image.load("sourceFilePath");	
@@ -44,6 +45,6 @@ public class SetBackgroundAndDrawingColor {
 
 	    // Export CAD to TIFF
 	    objImage.save(dataDir + "result_out_.tiff", tiffOptions);
-		
+		//ExEnd:SetBackgroundAndDrawingColor	
 	}
 }

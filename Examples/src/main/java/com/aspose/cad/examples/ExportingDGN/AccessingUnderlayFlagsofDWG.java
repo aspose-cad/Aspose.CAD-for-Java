@@ -4,6 +4,7 @@ public class AccessingUnderlayFlagsofDWG
 {
     public static void main(String[] args)
     {
+        //ExStart:AccessingUnderlayFlagsofDWG
         // Input file name and path
         String fileName = "BlockRefDgn.dwg";
 
@@ -33,5 +34,6 @@ public class AccessingUnderlayFlagsofDWG
                 break;
             }
         }
+    //ExEnd:AccessingUnderlayFlagsofDWG
     }
 }

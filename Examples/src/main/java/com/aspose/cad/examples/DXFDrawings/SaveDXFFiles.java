@@ -14,15 +14,18 @@ public class SaveDXFFiles {
 public static void main(String[] args){
     //ExStart:SaveDXFFiles
 
-String dataDir = Utils.getDataDir(SaveDXFFiles.class) + "CADConversion/";
-String srcFile = dataDir + "conic_pyramid.dxf";    
-//String dir = GetFileFromDesktop("");
-File dirFile = new File(dataDir);
-for (final File fileEntry : dirFile.listFiles()) {
-if (fileEntry.getAbsolutePath().toLowerCase().endsWith(".dxf")) {
-SaveDxf(fileEntry.getAbsolutePath(), dataDir + fileEntry.getName() + "_updated.dxf");
-}
-}
+        String dataDir = Utils.getDataDir(SaveDXFFiles.class) + "CADConversion/";
+        String srcFile = dataDir + "conic_pyramid.dxf";    
+        //String dir = GetFileFromDesktop("");
+        File dirFile = new File(dataDir);
+        
+        for (final File fileEntry : dirFile.listFiles()) 
+        {
+            if (fileEntry.getAbsolutePath().toLowerCase().endsWith(".dxf"))
+            {
+                SaveDxf(fileEntry.getAbsolutePath(), dataDir + fileEntry.getName() + "_updated.dxf");
+            }
+        }
 
 //ExEnd:SaveDXFFiles
 

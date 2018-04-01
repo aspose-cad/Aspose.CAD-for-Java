@@ -12,12 +12,12 @@ public class SupportedDGNElements
 {
     public static void main(String[] args)
     {
-         
+         String dataDir = Utils.getDataDir(SupportedDGNElements.class) + "ExportingDGN/";
+        //ExStart:SupportedDGNElements
         // Input and Output file paths
         String fileName = "BlockRefDgn.dwg";
         String outPath = "BlockRefDgn.dwg.pdf";
-       //ExStart:SupportedDGNElements
-        String dataDir = Utils.getDataDir(SupportedDGNElements.class) + "ExportingDGN/";
+       
         DgnImage dgnImage = (DgnImage)Image.load(dataDir);
         {
             for (DgnDrawingElementBase element : dgnImage.getElements())
@@ -48,7 +48,7 @@ public class SupportedDGNElements
                         break;
                     }
                 }
-         //ExEnd:SupportedDGNElements   
+         //ExEnd:SupportedDGNElements
          }
         }
     }

@@ -13,7 +13,8 @@ public class ConvertCADLayoutToRasterImageFormat {
 		
 		// The path to the resource directory.
 		String dataDir = Utils.getDataDir(ConvertCADLayoutToRasterImageFormat.class) + "CADConversion/";
-		String srcFile = dataDir + "conic_pyramid.dxf";
+//ExStart:ConvertCADLayoutToRasterImageFormat
+            String srcFile = dataDir + "conic_pyramid.dxf";
 		
 		Image image = Image.load(srcFile);
 
@@ -35,6 +36,7 @@ public class ConvertCADLayoutToRasterImageFormat {
 
 		// Save resultant image
 		image.save(dataDir + "conic_pyramid_layoutstorasterimage_out_.tiff", options);
-	}
+//ExEnd:ConvertCADLayoutToRasterImageFormat	
+        }
 
 }

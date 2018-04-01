@@ -94,6 +94,7 @@ private static void IterateCADNodeEntities(CadBaseEntity obj)
     private static void IterateCADNodes(CadBaseEntity tempobj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-}
+
 
 //ExEnd:SearchTextInDWGAutoCADFile
+}

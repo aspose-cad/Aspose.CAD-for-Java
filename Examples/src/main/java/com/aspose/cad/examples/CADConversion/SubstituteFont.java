@@ -11,16 +11,19 @@ public class SubstituteFont {
 		
 		// The path to the resource directory.
 		String dataDir = Utils.getDataDir(SubstituteFont.class) + "CADConversion/";
-		String srcFile = dataDir + "conic_pyramid.dxf";
+		//ExStart:SubstituteFont
+                String srcFile = dataDir + "conic_pyramid.dxf";
 		
 		// Load a CAD drawing  in an instance of CadImage
 		CadImage cadImage = (CadImage) Image.load(srcFile);
 
 		// Iterate over the items of CadStylesDictionary
-		for (Object style : cadImage.getStyles()) {
-			// Set the font name
-		
-                     cadImage.getStyles().get_Item(0).setPrimaryFontName("Arial");
-		}
+		for(Object style : cadImage.getStyles())
+                {
+                    // Set the font name
+                    ((com.aspose.cad.fileformats.cad.cadtables.CadStyleTableObject)style).setPrimaryFontName("Arial");
+                }
+
+                //ExEnd:SubstituteFont
 	}
 }

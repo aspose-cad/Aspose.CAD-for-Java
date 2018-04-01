@@ -10,15 +10,10 @@
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
     <dependencies>
+       
         <dependency>
             <groupId>com.aspose</groupId>
-            <artifactId>aspose-cells</artifactId>
-            <version>18.2</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>com.aspose</groupId>
-            <artifactId>cad-java-examples</artifactId>
+            <artifactId>aspose-cad</artifactId>
             <version>18.3</version>
             <classifier>jdk16</classifier>
         </dependency>

@@ -12,7 +12,9 @@ public class Export3DAutoCADImagesToPDF {
 		
 		// The path to the resource directory.
 		String dataDir = Utils.getDataDir(Export3DAutoCADImagesToPDF.class) + "ExportingCAD/";
-		String srcFile = dataDir + "conic_pyramid.dxf";
+		//ExStart:Export3DAutoCADImagesToPDF
+                
+                String srcFile = dataDir + "conic_pyramid.dxf";
 		
 		Image cadImage = Image.load(srcFile);
 
@@ -25,6 +27,7 @@ public class Export3DAutoCADImagesToPDF {
 		PdfOptions pdfOptions = new PdfOptions();
 		pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
 		cadImage.save(dataDir + "Export3DImagestoPDF_out_.pdf", pdfOptions);
+                //ExStart:Export3DAutoCADImagesToPDF
 
 	}
 

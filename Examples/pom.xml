@@ -21,7 +21,10 @@
     <repositories>
         <repository>
             <id>aspose-maven-repository</id>
-          <url>http://maven.aspose.com/repository/ext-release-local</url>
+          <!--url>http://maven.aspose.com/repository/ext-release-local</url!-->
+          <url>http://artifact.aspose.com/repo/</url>
+          
+          
         </repository>
         <repository>
             <id>com.springsource.repository.bundles.external</id>

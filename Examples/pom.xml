@@ -22,7 +22,7 @@
         <repository>
             <id>aspose-maven-repository</id>
           <!--url>http://maven.aspose.com/repository/ext-release-local</url!-->
-          <url>http://repository.aspose.com/repo/</url>
+          <url>http://artifact.aspose.com/repo/</url>
           
           
         </repository>

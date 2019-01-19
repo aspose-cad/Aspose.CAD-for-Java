@@ -31,8 +31,8 @@ public class ConvertCADLayerToRasterImageFormat {
 		rasterizationOptions.setCenterDrawing(true);
 
 		// Add the layer name to the CadRasterizationOptions's layer list
-		rasterizationOptions.getLayers().add("0"); //Most of the CAD drawings have a layer by name 0, you may specify any name
-
+	        rasterizationOptions.setLayers(new String[]{"0"});
+ 
 		// Create an instance of JpegOptions (or any ImageOptions for raster formats)
 		JpegOptions options = new JpegOptions();
 		// Set VectorRasterizationOptions property to the instance of CadRasterizationOptions

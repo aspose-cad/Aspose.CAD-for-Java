@@ -37,8 +37,8 @@ public class ConvertAllCADLayersToSeparateImages {
                     System.out.println("Start with " +layer);
 
                     // Add the layer name to the CadRasterizationOptions's layer list
-                    rasterizationOptions.getLayers().add(layer);
-
+                    rasterizationOptions.setLayers(new String[]{layer});
+ 
                     // Create an instance of JpegOptions (or any ImageOptions for raster formats)
                     JpegOptions options = new JpegOptions();
                     // Set VectorRasterizationOptions property to the instance of CadRasterizationOptions

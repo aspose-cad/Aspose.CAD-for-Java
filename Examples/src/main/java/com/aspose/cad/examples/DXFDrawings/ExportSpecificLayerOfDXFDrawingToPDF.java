@@ -21,7 +21,8 @@ public class ExportSpecificLayerOfDXFDrawingToPDF {
 	    rasterizationOptions.setPageWidth(1600);
 	    rasterizationOptions.setPageHeight(1600);
 	    // Add desired layers
-	    rasterizationOptions.getLayers().add("0");
+	     rasterizationOptions.setLayers(new String[]{"0"});
+ 
 
 	    // Create an instance of PdfOptions
 	    PdfOptions pdfOptions = new PdfOptions();

@@ -23,7 +23,7 @@ public class SetCanvasSizeAndMode {
             
             rasterizationOptions.setAutomaticLayoutsScaling(true); 
 	    
-            rasterizationOptions.isNoScaling();
+            rasterizationOptions.setNoScaling(true);
 
 	    // Create an instance of PdfOptions
 	    PdfOptions pdfOptions = new PdfOptions();

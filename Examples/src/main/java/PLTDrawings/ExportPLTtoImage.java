@@ -27,7 +27,7 @@ public static void main(String[] args){
      
     //ExStart:ExportPLTtoImage  
     
-    String PLTPathToFile = dataDir + "B747.plt";
+    String PLTPathToFile = dataDir + "50states.plt";
     Image image = Image.load(PLTPathToFile);
   
     //Setting PDF Options
@@ -42,7 +42,7 @@ public static void main(String[] args){
     imageOptions.setVectorRasterizationOptions(cadRasterizationOptions);
    
     //Saving to Image
-    image.save(dataDir+"B747.jpeg", imageOptions);
+    image.save(dataDir+"50states.jpeg", imageOptions);
 
 //ExEnd:ExportPLTtoImage
 }

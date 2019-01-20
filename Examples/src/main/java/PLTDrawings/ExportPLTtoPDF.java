@@ -23,7 +23,7 @@ public class ExportPLTtoPDF {
 public static void main(String[] args){ 
    //ExStart:ExportPLTtoPDF  
     String dataDir = Utils.getDataDir(ExportPLTtoPDF.class) + "PLTDrawings\\";
-    String PLTPathToFile = dataDir + "B747.plt";
+    String PLTPathToFile = dataDir + "50states.plt";
     Image image = Image.load(PLTPathToFile);
   
     //Setting PDF Options
@@ -37,7 +37,7 @@ public static void main(String[] args){
     pdfOptions.setVectorRasterizationOptions(cadRasterizationOptions);
    
     //Saving to PDF
-    image.save(dataDir+"B747.pdf", pdfOptions);
+    image.save(dataDir+"50states.pdf", pdfOptions);
 
 //ExEnd:ExportPLTtoPDF
 }

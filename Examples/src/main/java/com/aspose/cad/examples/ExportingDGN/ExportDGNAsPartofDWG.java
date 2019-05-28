@@ -34,7 +34,7 @@ public class ExportDGNAsPartofDWG
         com.aspose.cad.imageoptions.CadRasterizationOptions vectorRasterizationOptions = new com.aspose.cad.imageoptions.CadRasterizationOptions();
         vectorRasterizationOptions.setPageWidth(1600);
         vectorRasterizationOptions.setPageHeight(1600);
-        vectorRasterizationOptions.setCenterDrawing(true);
+//        vectorRasterizationOptions.setCenterDrawing(true);
         vectorRasterizationOptions.setLayouts(new String[] { "Model" });
         vectorRasterizationOptions.setAutomaticLayoutsScaling(false);
         vectorRasterizationOptions.setNoScaling(true);

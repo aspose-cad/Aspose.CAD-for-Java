@@ -24,7 +24,7 @@ public class ExportingDGNAutoCADFormatToPDF {
         CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
         vectorOptions.setPageWidth(1500);
         vectorOptions.setPageHeight(1500);
-        vectorOptions.setCenterDrawing(true);
+//        vectorOptions.setCenterDrawing(true);
         vectorOptions.setNoScaling(true);
 
         vectorOptions.setAutomaticLayoutsScaling(false);

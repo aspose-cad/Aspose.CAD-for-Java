@@ -12,11 +12,12 @@ public class AutoAdjustingCADDrawingSize
     public static void main(String[] args) 
     {
 //ExStart:AutoAdjustingCADDrawingSize
+        String dataDir = Utils.getDataDir(AutoAdjustingCADDrawingSize.class) + "CADConversion/";
         // Path to source file
-        String sourceFilePath = "sample.dwg";
+        String sourceFilePath = dataDir+"sample.dwg";
 
         // Load a CAD drawing in an instance of Image
-        com.aspose.cad.Image objImage = com.aspose.cad.Image.load("sourceFilePath");
+        com.aspose.cad.Image objImage = com.aspose.cad.Image.load(sourceFilePath);
 
         // Create an instance of BmpOptions class
         com.aspose.cad.imageoptions.BmpOptions bmpOptions = new com.aspose.cad.imageoptions.BmpOptions();
@@ -26,7 +27,7 @@ public class AutoAdjustingCADDrawingSize
                 new com.aspose.cad.imageoptions.CadRasterizationOptions();
 
         bmpOptions.setVectorRasterizationOptions(cadRasterizationOptions);
-        cadRasterizationOptions.setCenterDrawing(true);
+//        cadRasterizationOptions.setCenterDrawing(true);
 
         // Set the layouts property
         cadRasterizationOptions.setLayouts( new String[] { "Model" } );

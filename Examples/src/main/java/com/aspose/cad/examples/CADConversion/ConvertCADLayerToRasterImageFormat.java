@@ -5,17 +5,17 @@ import com.aspose.cad.examples.DWGDrawings.ExportSpecificDWGLayoutToPDF;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.JpegOptions;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class ConvertCADLayerToRasterImageFormat {
 	
 	public static void main(String[] args) {
-		
-		// The path to the resource directory.
-	        //String dataDir = Utils.getDataDir(ExportSpecificDWGLayoutToPDF.class) + "DWGDrawings/";
-		//String srcFile = dataDir + "visualization_-_conference_room.dwg";
-                
+		//ExStart:ConvertCADLayerToRasterImageFormat
+		// The path to the resource directory.	        
                 String dataDir = Utils.getDataDir(ConvertCADLayerToRasterImageFormat.class) + "CADConversion/";
-	//ExStart:ConvertCADLayerToRasterImageFormat
+	
         	String srcFile = dataDir + "conic_pyramid.dxf";
 		
 		// Load a CAD drawing in an instance of Image
@@ -28,10 +28,11 @@ public class ConvertCADLayerToRasterImageFormat {
 		rasterizationOptions.setPageHeight(500);
 
 		// Set the drawing to render at the center of image
-		rasterizationOptions.setCenterDrawing(true);
+//		rasterizationOptions.setCenterDrawing(true);
 
+                List<String> stringList = new ArrayList<>(Arrays.asList("0"));
 		// Add the layer name to the CadRasterizationOptions's layer list
-	        rasterizationOptions.setLayers(new String[]{"0"});
+	        rasterizationOptions.setLayers(stringList);
  
 		// Create an instance of JpegOptions (or any ImageOptions for raster formats)
 		JpegOptions options = new JpegOptions();
@@ -39,6 +40,6 @@ public class ConvertCADLayerToRasterImageFormat {
 		options.setVectorRasterizationOptions(rasterizationOptions);
 		// Export each layer to JPEG format
 		image.save(dataDir + "CADLayersToRasterImageFormats_out_.jpg", options);
-//ExEnd:ConvertCADLayerToRasterImageFormat
+                //ExEnd:ConvertCADLayerToRasterImageFormat
 	}
 }

@@ -6,6 +6,8 @@ import com.aspose.cad.fileformats.cad.CadImage;
 import com.aspose.cad.fileformats.cad.cadtables.CadLayerTable;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.JpegOptions;
+import java.util.Arrays;
+import java.util.List;
 
 public class ConvertAllCADLayersToSeparateImages {
 
@@ -27,7 +29,7 @@ public class ConvertAllCADLayersToSeparateImages {
 		rasterizationOptions.setPageHeight(500);
 
 		// Set the drawing to render at the center of image
-		rasterizationOptions.setCenterDrawing(true);
+//		rasterizationOptions.setCenterDrawing(true);
 		
 		// Get the layers in an instance of CadLayersDictionary. 
 		// Iterate over the layers
@@ -36,8 +38,9 @@ public class ConvertAllCADLayersToSeparateImages {
                     // Display layer name for tracking
                     System.out.println("Start with " +layer);
 
+                    List<String> stringList = Arrays.asList(layer);
                     // Add the layer name to the CadRasterizationOptions's layer list
-                    rasterizationOptions.setLayers(new String[]{layer});
+                    rasterizationOptions.setLayers(stringList);
  
                     // Create an instance of JpegOptions (or any ImageOptions for raster formats)
                     JpegOptions options = new JpegOptions();

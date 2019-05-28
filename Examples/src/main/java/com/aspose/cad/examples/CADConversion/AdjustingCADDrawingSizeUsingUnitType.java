@@ -12,9 +12,9 @@ public class AdjustingCADDrawingSizeUsingUnitType
     public static void main(String[] args) 
     {
        //ExStart:AdjustingCADDrawingSizeUsingUnitType
-
+       String dataDir = Utils.getDataDir(AdjustingCADDrawingSizeUsingUnitType.class) + "CADConversion/";
         // Path to source file
-        String sourceFilePath = "sample.dwg";
+        String sourceFilePath = dataDir + "sample.dwg";
             
         // Load a CAD drawing in an instance of Image
       Image image = Image.load(sourceFilePath);
@@ -28,7 +28,7 @@ public class AdjustingCADDrawingSizeUsingUnitType
                 new com.aspose.cad.imageoptions.CadRasterizationOptions();
         
         bmpOptions.setVectorRasterizationOptions(cadRasterizationOptions);
-        cadRasterizationOptions.setCenterDrawing(true);
+//        cadRasterizationOptions.setCenterDrawing(true);
 
         // Set the UnitType property
         cadRasterizationOptions.setUnitType(com.aspose.cad.imageoptions.UnitType.Centimenter);

@@ -15,10 +15,10 @@ import java.util.List;
 public class ExportSpecificDXFLayoutToImage {
 
 	public static void main(String[] args) {
-		
+		//ExStart:ExportSpecificDXFLayoutToImage
 		// The path to the resource directory.
             String dataDir = Utils.getDataDir(ExportSpecificDXFLayoutToPDF.class) + "DXFDrawings\\";
-            //ExStart:ExportSpecificDXFLayoutToImage
+            
             String srcFile = dataDir + "for_layers_test.dwf";
 	
             DwfImage image =(DwfImage)Image.load(srcFile); 
@@ -35,11 +35,13 @@ public class ExportSpecificDXFLayoutToImage {
 	    CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
 	    rasterizationOptions.setPageWidth(1600);
 	    rasterizationOptions.setPageHeight(1600);  
-            rasterizationOptions.setCenterDrawing(true);
+//            rasterizationOptions.setCenterDrawing(true);
           
             String[] stringArray = Arrays.copyOf(layersNames.toArray(), layersNames.toArray().length, String[].class);
-            // Add desired layers
-            rasterizationOptions.setLayers(stringArray);
+            
+            List<String> stringList = Arrays.asList(stringArray);
+             // Add desired layers
+            rasterizationOptions.setLayers(stringList);
 
             JpegOptions jpegOptions = new JpegOptions();
             jpegOptions.setVectorRasterizationOptions(rasterizationOptions);

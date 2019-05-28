@@ -24,7 +24,7 @@ public class ExportDXFToWMF {
             {
               {
                 CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
-                rasterizationOptions.setCenterDrawing(true);
+//                rasterizationOptions.setCenterDrawing(true);
                 rasterizationOptions.setPageWidth(100);
                 rasterizationOptions.setPageHeight(100);
                 WmfOptions wmfOptions = new WmfOptions();

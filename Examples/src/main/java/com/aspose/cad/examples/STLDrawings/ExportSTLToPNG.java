@@ -25,7 +25,7 @@ public class ExportSTLToPNG {
         CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
         vectorOptions.setPageWidth(1500);
         vectorOptions.setPageHeight(1500);
-        vectorOptions.setCenterDrawing(true);
+//        vectorOptions.setCenterDrawing(true);
         PngOptions pngOptions = new PngOptions();
         //pngOptions.setVectorRasterizationOptions(rasterizationOptions);
         String outPath = "galeon.stl.png";

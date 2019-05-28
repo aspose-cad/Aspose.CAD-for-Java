@@ -23,7 +23,7 @@ public class ExportIFCToPNG {
         CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
         vectorOptions.setPageWidth(1500);
         vectorOptions.setPageHeight(1500);
-        vectorOptions.setCenterDrawing(true);
+//        vectorOptions.setCenterDrawing(true);
         PngOptions pngOptions = new PngOptions();
         pngOptions.setVectorRasterizationOptions(vectorOptions);
         String outPath = fileName + ".png";

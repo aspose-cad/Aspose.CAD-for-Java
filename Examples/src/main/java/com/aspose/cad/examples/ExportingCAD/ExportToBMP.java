@@ -8,7 +8,7 @@ import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.imageoptions.BmpOptions;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
-import com.aspose.cad.imageoptions.TypeOfEntities;
+//import com.aspose.cad.imageoptions.TypeOfEntities;
 
 public class ExportToBMP {
 
@@ -26,7 +26,7 @@ public class ExportToBMP {
            
             CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
             bmpOptions.setVectorRasterizationOptions(rasterizationOptions);
-            rasterizationOptions.setCenterDrawing(true);
+//            rasterizationOptions.setCenterDrawing(true);
             rasterizationOptions.setPageHeight(500);
             rasterizationOptions.setPageWidth(500);
             rasterizationOptions.setLayouts(new String[] { "Model" });

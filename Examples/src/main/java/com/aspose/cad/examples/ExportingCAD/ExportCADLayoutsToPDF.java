@@ -7,7 +7,7 @@ import com.aspose.cad.TextRenderingHint;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
-import com.aspose.cad.imageoptions.TypeOfEntities;
+//import com.aspose.cad.imageoptions.TypeOfEntities;
 
 public class ExportCADLayoutsToPDF {
 
@@ -27,7 +27,7 @@ public class ExportCADLayoutsToPDF {
 		rasterizationOptions.setPageHeight(1600);
 
 		// Set the Entities type property to Entities3D.
-		rasterizationOptions.setTypeOfEntities(TypeOfEntities.Entities3D);
+//		rasterizationOptions.setTypeOfEntities(TypeOfEntities.Entities3D);
                 rasterizationOptions.setAutomaticLayoutsScaling(true);
                 rasterizationOptions.setNoScaling (false);
 		//rasterizationOptions.setScaleMethod(ScaleType.GrowToFit);

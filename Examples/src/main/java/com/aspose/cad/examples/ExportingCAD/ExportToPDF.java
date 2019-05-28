@@ -7,7 +7,7 @@ import com.aspose.cad.TextRenderingHint;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
-import com.aspose.cad.imageoptions.TypeOfEntities;
+//import com.aspose.cad.imageoptions.TypeOfEntities;
 
 public class ExportToPDF {
 
@@ -23,7 +23,7 @@ public class ExportToPDF {
                     PdfOptions pdfOptions = new PdfOptions();
                     CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
                     pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
-                    rasterizationOptions.setCenterDrawing(true);
+//                    rasterizationOptions.setCenterDrawing(true);
                     rasterizationOptions.setPageHeight(500);
                     rasterizationOptions.setPageWidth(500);
                     rasterizationOptions.setLayouts(new String[] { "Model" });

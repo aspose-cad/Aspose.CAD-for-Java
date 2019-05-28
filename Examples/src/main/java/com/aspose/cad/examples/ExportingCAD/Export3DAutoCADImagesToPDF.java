@@ -4,7 +4,7 @@ import com.aspose.cad.Image;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
-import com.aspose.cad.imageoptions.TypeOfEntities;
+//import com.aspose.cad.imageoptions.TypeOfEntities;
 
 public class Export3DAutoCADImagesToPDF {
 
@@ -21,7 +21,7 @@ public class Export3DAutoCADImagesToPDF {
 		CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
 		rasterizationOptions.setPageWidth(500);
 		rasterizationOptions.setPageHeight(500);
-		rasterizationOptions.setTypeOfEntities(TypeOfEntities.Entities3D);
+//		rasterizationOptions.setTypeOfEntities(TypeOfEntities.Entities3D);
 
 		rasterizationOptions.setLayouts(new String[] {"Model"});
 		PdfOptions pdfOptions = new PdfOptions();

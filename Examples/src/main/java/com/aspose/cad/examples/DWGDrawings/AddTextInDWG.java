@@ -20,9 +20,12 @@ public class AddTextInDWG {
 
 public static void main(String[] args){ 
    //ExStart:AddTextInDWG  
-    String dataDir = Utils.getDataDir(AddTextInDWG.class) + "DWGDrawings;/";
-    String dwgPathToFile = dataDir + "conic_pyramid.dwg";
+    String dataDir = Utils.getDataDir(AddTextInDWG.class) + "DWGDrawings/";
+    String dwgPathToFile = dataDir + "SimpleEntites.dwg";
+    
+    
     Image image = Image.load(dwgPathToFile);
+    
     CadText cadText = new CadText();
     cadText.setStyleType("Standard");
     cadText.setDefaultValue("Some custom text");
@@ -32,13 +35,18 @@ public static void main(String[] args){
     cadText.getFirstAlignment().setY(5.56);
     cadText.setTextHeight(0.8);
     cadText.setScaleX(0);
+    
     CadImage cadImage = ((CadImage)(image));
     cadImage.getBlockEntities().get_Item("*Model_Space").addEntity(cadText);
+    
     PdfOptions pdfOptions = new PdfOptions();
+    
     CadRasterizationOptions cadRasterizationOptions = new CadRasterizationOptions();
+    
     pdfOptions.setVectorRasterizationOptions(cadRasterizationOptions);
+    
     cadRasterizationOptions.setDrawType(CadDrawTypeMode.UseObjectColor);
-    cadRasterizationOptions.setCenterDrawing(true);
+//    cadRasterizationOptions.setCenterDrawing(true);
     cadRasterizationOptions.setPageHeight(1600);
     cadRasterizationOptions.setPageWidth(1600);
     cadRasterizationOptions.setLayouts(new String[] {"Model"});

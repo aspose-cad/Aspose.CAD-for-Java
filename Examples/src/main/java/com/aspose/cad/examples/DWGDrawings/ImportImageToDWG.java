@@ -23,7 +23,7 @@ public class ImportImageToDWG {
 public static void main(String[] args) {
 
 
-        String dataDir = Utils.getDataDir(ImportImageToDWG.class) + "DWGDrawings;/";
+        String dataDir = Utils.getDataDir(ImportImageToDWG.class) + "DWGDrawings/";
         //ExStart:ImportImageToDWG
         String srcFile = dataDir + "conic_pyramid.dxf";
 
@@ -65,7 +65,7 @@ public static void main(String[] args) {
         CadRasterizationOptions cadRasterizationOptions = new CadRasterizationOptions();
         pdfOptions.setVectorRasterizationOptions(cadRasterizationOptions);
         cadRasterizationOptions.setDrawType(CadDrawTypeMode.UseObjectColor);
-        cadRasterizationOptions.setCenterDrawing(true);
+//        cadRasterizationOptions.setCenterDrawing(true);
         cadRasterizationOptions.setPageHeight(1600);
         cadRasterizationOptions.setPageWidth(1600);
         cadRasterizationOptions.setLayouts(new String[] {"Model"});

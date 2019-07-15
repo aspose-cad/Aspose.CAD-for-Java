@@ -15,23 +15,21 @@
             <groupId>com.aspose</groupId>
             <artifactId>aspose-cad</artifactId>
             <version>19.5</version>
-            <classifier>jdk16</classifier>
+            <classifier>javadoc</classifier>
+        </dependency>
+        
+         <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-cad</artifactId>
+            <version>19.5</version>
+            
         </dependency>
     </dependencies>
-    <repositories>
-        <repository>
-            <id>aspose-maven-repository</id>
-          <!--url>http://maven.aspose.com/repository/ext-release-local</url!-->
-          <url>http://artifact.aspose.com/repo/</url>
-          
-          
-        </repository>
-        <repository>
-            <id>com.springsource.repository.bundles.external</id>
-            <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
-            <url>http://repository.springsource.com/maven/bundles/external</url>
-        </repository>
-  
-  
-    </repositories>
+     <repositories>
+    <repository>
+        <id>AsposeJavaAPI</id>
+        <name>Aspose Java API</name>
+        <url>https://repository.aspose.com/repo/</url>
+    </repository>
+</repositories>
 </project>

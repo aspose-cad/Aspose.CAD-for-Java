@@ -4,6 +4,9 @@ import com.aspose.cad.Image;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
 import com.aspose.cad.imageoptions.PdfOptions;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class ExportSpecificLayerOfDXFDrawingToPDF {
 
@@ -21,7 +24,8 @@ public class ExportSpecificLayerOfDXFDrawingToPDF {
 	    rasterizationOptions.setPageWidth(1600);
 	    rasterizationOptions.setPageHeight(1600);
 	    // Add desired layers
-	     rasterizationOptions.setLayers(new String[]{"0"});
+            List<String> stringList = new ArrayList<>(Arrays.asList("0"));
+	     rasterizationOptions.setLayers(stringList);
  
 
 	    // Create an instance of PdfOptions

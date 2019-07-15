@@ -3,6 +3,7 @@ package com.aspose.cad.examples.DWGDrawings;
 import com.aspose.cad.Image;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.cad.CadImage;
+import com.aspose.cad.fileformats.cad.cadparameters.CadStringParameter;
 
 public class GetBlockAttributeValueOfExternalReference {
 
@@ -14,7 +15,7 @@ public class GetBlockAttributeValueOfExternalReference {
 		CadImage cadImage = (CadImage) Image.load(dataDir + "sample.dwg");
 		
 		// Access the external path name property
-		String sXternalRef = cadImage.getBlockEntities().get_Item("*MODEL_SPACE").getXRefPathName();
+		CadStringParameter sXternalRef = cadImage.getBlockEntities().get_Item("*MODEL_SPACE").getXRefPathName();
 		System.out.println(sXternalRef);
                 //ExEnd:GetBlockAttributeValueOfExternalReference
 	}

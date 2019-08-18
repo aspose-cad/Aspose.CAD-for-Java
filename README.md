@@ -15,6 +15,14 @@ Directory | Description
 --------- | -----------
 [Examples](Examples)  | A collection of Java examples that help you learn and explore the API features
 
+
+## How to Run the Examples?
+
+After you have downloaded the ZIP file from the [Download ZIP](https://github.com/aspose-cad/Aspose.CAD-for-Java/archive/master.zip) link above, please check the following link with detailed instructions on how to run these Source Code Examples.
+
+[How to Run the Examples](https://docs.aspose.com/display/cadjava/How+to+Run+the+Examples)
+
+
 ## Resources
 
 + **Website:** [www.aspose.com](http://www.aspose.com)

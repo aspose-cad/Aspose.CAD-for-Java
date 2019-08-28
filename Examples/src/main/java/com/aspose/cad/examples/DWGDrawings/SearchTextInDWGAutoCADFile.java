@@ -27,10 +27,10 @@ public class SearchTextInDWGAutoCADFile {
 	}
 
 	public static void searchTextInDWGAutoCADFile() 
-{ 
-    String  dataDir="Test_Apsose.CAD\\";
+       { 
+    //String  dataDir="Test_Apsose.CAD\\";
      // Load an existing DWG file as CadImage.
-     CadImage cadImage = (CadImage) CadImage.load(dataDir + "sample_file3.dwg");
+     CadImage cadImage = (CadImage) CadImage.load(dataDir + "sample_file.dwg");
      for (CadBaseEntity entity : cadImage.getEntities()) 
      {
        IterateCADNodeEntities(entity); 

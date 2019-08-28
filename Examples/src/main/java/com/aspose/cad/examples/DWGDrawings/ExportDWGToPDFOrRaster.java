@@ -15,9 +15,9 @@ public class ExportDWGToPDFOrRaster {
 	
             String dataDir = Utils.getDataDir(ExportDWGToPDFOrRaster.class) + "DWGDrawings/";
          	
-            String srcFile = dataDir + "visualization_-_conference_room.dwg";
+            String srcFile = dataDir + "visualization_conference_room.dwg";
        
-            com.aspose.cad.Image objImage = com.aspose.cad.Image.load("example.dxf");
+            com.aspose.cad.Image objImage = com.aspose.cad.Image.load(srcFile);
             Boolean currentUnitIsMetric = IsMetric(objImage.getUnitType());
             int currentUnitCoefficient = objImage.getUnitType();
             

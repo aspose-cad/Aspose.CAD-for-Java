@@ -9,10 +9,7 @@ import com.aspose.cad.Image;
 import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.cad.CadImage;
 
-/**
- *
- * @author mfazi
- */
+
 public class DWGToDXF {
     
     public static void main(String[] args){ 

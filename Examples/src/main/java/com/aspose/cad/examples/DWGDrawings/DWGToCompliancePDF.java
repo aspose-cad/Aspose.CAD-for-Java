@@ -13,10 +13,10 @@ public class DWGToCompliancePDF {
 		// The path to the resource directory.
 		String dataDir = Utils.getDataDir(DWGToCompliancePDF.class) + "DWGDrawings/";
 	    //ExStart:DWGToCompliancePDF
-         	String srcFile = dataDir + "visualization_-_conference_room.dwg";
+         	String srcFile = dataDir + "visualization_conference_room.dwg";
        		
 	
-                com.aspose.cad.Image objImage = com.aspose.cad.Image.load("example.dxf");
+                com.aspose.cad.Image objImage = com.aspose.cad.Image.load(srcFile);
                // Create an instance of PdfOptions
                 PdfOptions pdfOptions = new PdfOptions();
                 pdfOptions.setVectorRasterizationOptions(new CadRasterizationOptions());
@@ -24,7 +24,7 @@ public class DWGToCompliancePDF {
                 pdfOptions.setCorePdfOptions(new PdfDocumentOptions());
 
                 pdfOptions.getCorePdfOptions().setCompliance(PdfCompliance.PdfA1a);
-                objImage.save(dataDir, pdfOptions);
+                objImage.save(dataDir+"Saved1.pdf", pdfOptions);
 
                 pdfOptions.getCorePdfOptions().setCompliance(PdfCompliance.PdfA1b);
                 objImage.save(dataDir+"Saved.pdf", pdfOptions);

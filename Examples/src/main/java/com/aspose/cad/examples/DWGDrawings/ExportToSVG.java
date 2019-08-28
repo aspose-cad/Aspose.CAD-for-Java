@@ -10,10 +10,7 @@ import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.imageoptions.SvgOptions;
 import com.aspose.cad.imageoptions.svgoptionsparameters.SvgColorMode;
 
-/**
- *
- * @author mfazi
- */
+
 public class ExportToSVG {
     
     public static void main(String[] args){ 

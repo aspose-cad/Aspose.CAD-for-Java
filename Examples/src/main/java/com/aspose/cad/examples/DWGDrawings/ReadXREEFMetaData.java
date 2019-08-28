@@ -15,7 +15,7 @@ public class ReadXREEFMetaData {
             // The path to the resource directory.
             String dataDir = Utils.getDataDir(ReadXREEFMetaData.class) + "DWGDrawings/";
 	    //ExStart:ReadXREEFMetaData
-            CadImage image = (CadImage)Image.load(dataDir);
+            CadImage image = (CadImage)Image.load(dataDir+"Bottom_plate.dwg");
             {
                 for (CadBaseEntity entity : image.getEntities())
                 {

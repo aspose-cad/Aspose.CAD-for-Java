@@ -32,7 +32,7 @@ public class SetCanvasSizeAndMode {
 	    pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
 
 	    // Export CAD to PDF
-	    objImage.save("result_out_.pdf", pdfOptions);
+	    objImage.save(dataDir +"result_out_.pdf", pdfOptions);
 
 	    // Create an instance of TiffOptions
 	    TiffOptions tiffOptions = new TiffOptions(TiffExpectedFormat.Default);

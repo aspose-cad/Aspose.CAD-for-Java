@@ -18,7 +18,7 @@ public class ReadingDWT {
 		
 		// Load a CAD drawing  in an instance of CadImage
 		//CadImage cadImage = (CadImage) Image.load(srcFile);
-               com.aspose.cad.fileformats.cad.CadImage objImage =(CadImage) com.aspose.cad.Image.load("sourceFilePath");
+               com.aspose.cad.fileformats.cad.CadImage objImage =(CadImage) com.aspose.cad.Image.load(srcFile);
                        
                 for(Object style : objImage.getStyles())
                 {

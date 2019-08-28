@@ -19,7 +19,7 @@ public class SetBackgroundAndDrawingColor {
                 String srcFile = dataDir + "conic_pyramid.dxf";
 		
 	//	Image image = Image.load(srcFile);
-	    com.aspose.cad.Image objImage = com.aspose.cad.Image.load("sourceFilePath");	
+	    com.aspose.cad.Image objImage = com.aspose.cad.Image.load(srcFile);	
 	    // Create an instance of CadRasterizationOptions and set its various properties
 	    CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
 	    rasterizationOptions.setPageWidth(1600);
@@ -35,7 +35,7 @@ public class SetBackgroundAndDrawingColor {
 	    pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
 
 	    // Export CAD to PDF
-	    objImage.save("result_out_.pdf", pdfOptions);
+	    objImage.save(dataDir +"result_out_.pdf", pdfOptions);
 
 	    // Create an instance of TiffOptions
 	    TiffOptions tiffOptions = new TiffOptions(TiffExpectedFormat.Default);

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PLTDrawings;
+package IGESDrawings;
 
 import PLTDrawings.*;
 import com.aspose.cad.examples.DWGDrawings.*;

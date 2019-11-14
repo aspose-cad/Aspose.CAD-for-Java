@@ -29,7 +29,7 @@ public class ExportingDGNAutoCADFormatToRasterImageFormat {
             CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
             vectorOptions.setPageWidth(600);
             vectorOptions.setPageHeight(400);
-//            vectorOptions.setCenterDrawing(true);
+ 
             vectorOptions.setNoScaling(true);
 	
             vectorOptions.setAutomaticLayoutsScaling(false);

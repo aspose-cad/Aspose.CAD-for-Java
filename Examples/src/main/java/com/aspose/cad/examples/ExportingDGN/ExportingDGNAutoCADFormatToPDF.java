@@ -14,28 +14,23 @@ public class ExportingDGNAutoCADFormatToPDF {
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		
-        String dataDir = Utils.getDataDir(ExportingDGNAutoCADFormatToPDF.class) + "ExportingDGN/";
+       // Input and Output file paths
+            String dataDir = Utils.getDataDir(ExportingDGNAutoCADFormatToPDF.class) + "ExportingDGN/";
+           //ExStart:SupportForDGNV7   
+            String fileName = dataDir + "Nikon_D90_Camera.dgn";
+            String outFile  = dataDir + "Nikon_D90_Camera.dgn";
+            
+            DgnImage objImage = (DgnImage)com.aspose.cad.Image.load(fileName);
+            
+                PdfOptions options = new PdfOptions();
+                CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
+                vectorOptions.setPageWidth(1500);
+                vectorOptions.setPageHeight(1500);
+                vectorOptions.setAutomaticLayoutsScaling(true);            
+                vectorOptions.setLayouts(new String[] { "1", "2", "3", "9" });//only export 4 (1,2,3 and 9) views
+                options.setVectorRasterizationOptions(vectorOptions);
 
-        //ExStart:ExportingDGNAutoCADFormatToPDF
-        // load an existing DGN file as DgnImage.
-        DgnImage dgnImage = (DgnImage)Image.load(dataDir + "Nikon_D90_Camera.dgn");
-        // Create an object of CadRasterizationOptions class and define/set different properties
-        PdfOptions options = new PdfOptions();
-        CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
-        vectorOptions.setPageWidth(1500);
-        vectorOptions.setPageHeight(1500);
-//        vectorOptions.setCenterDrawing(true);
-        vectorOptions.setNoScaling(true);
-
-        vectorOptions.setAutomaticLayoutsScaling(false);
-
-        options.setVectorRasterizationOptions(vectorOptions);
-
-        OutputStream outStream = new FileOutputStream(dataDir + "ExportDGNToPdf_Out.pdf");
-
-        // Call the save method of the DgnImage class object.
-        dgnImage.save(outStream, options);
-        //ExEnd:ExportingDGNAutoCADFormatToPDF
+                objImage.save(outFile, options);
 
     }
 }

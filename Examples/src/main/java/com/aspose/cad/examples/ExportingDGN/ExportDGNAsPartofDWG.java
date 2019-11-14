@@ -1,5 +1,7 @@
 package com.aspose.cad.examples.ExportingDGN;
 
+import com.aspose.cad.examples.Utils.Utils;
+
 
 
 public class ExportDGNAsPartofDWG 
@@ -7,9 +9,12 @@ public class ExportDGNAsPartofDWG
     public static void main(String[] args)
     {
         //ExStart:ExportDGNAsPartofDWG
+        
         // Input and Output file paths
-        String fileName = "BlockRefDgn.dwg";
-        String outPath = "BlockRefDgn.dwg.pdf";
+            String dataDir = Utils.getDataDir(ExportDGNAsPartofDWG.class) + "ExportingDGN/";
+        // Input and Output file paths
+        String fileName = dataDir + "BlockRefDgn.dwg";
+        String outPath = dataDir +"BlockRefDgn.dwg.pdf";
 
         // Create an instance of PdfOptions class as we are exporting the DWG file to PDF format
         com.aspose.cad.imageoptions.PdfOptions exportOptions = new com.aspose.cad.imageoptions.PdfOptions();
@@ -34,7 +39,6 @@ public class ExportDGNAsPartofDWG
         com.aspose.cad.imageoptions.CadRasterizationOptions vectorRasterizationOptions = new com.aspose.cad.imageoptions.CadRasterizationOptions();
         vectorRasterizationOptions.setPageWidth(1600);
         vectorRasterizationOptions.setPageHeight(1600);
-//        vectorRasterizationOptions.setCenterDrawing(true);
         vectorRasterizationOptions.setLayouts(new String[] { "Model" });
         vectorRasterizationOptions.setAutomaticLayoutsScaling(false);
         vectorRasterizationOptions.setNoScaling(true);

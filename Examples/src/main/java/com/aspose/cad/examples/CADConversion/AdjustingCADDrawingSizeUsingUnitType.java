@@ -28,7 +28,6 @@ public class AdjustingCADDrawingSizeUsingUnitType
                 new com.aspose.cad.imageoptions.CadRasterizationOptions();
         
         bmpOptions.setVectorRasterizationOptions(cadRasterizationOptions);
-//        cadRasterizationOptions.setCenterDrawing(true);
 
         // Set the UnitType property
         cadRasterizationOptions.setUnitType(com.aspose.cad.imageoptions.UnitType.Centimenter);

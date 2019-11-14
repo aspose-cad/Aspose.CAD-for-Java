@@ -27,8 +27,7 @@ public class ConvertCADLayerToRasterImageFormat {
 		rasterizationOptions.setPageWidth(500);
 		rasterizationOptions.setPageHeight(500);
 
-		// Set the drawing to render at the center of image
-//		rasterizationOptions.setCenterDrawing(true);
+		
 
                 List<String> stringList = new ArrayList<>(Arrays.asList("0"));
 		// Add the layer name to the CadRasterizationOptions's layer list

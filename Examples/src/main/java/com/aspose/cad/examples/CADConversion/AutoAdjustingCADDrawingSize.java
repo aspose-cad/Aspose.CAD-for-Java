@@ -27,7 +27,6 @@ public class AutoAdjustingCADDrawingSize
                 new com.aspose.cad.imageoptions.CadRasterizationOptions();
 
         bmpOptions.setVectorRasterizationOptions(cadRasterizationOptions);
-//        cadRasterizationOptions.setCenterDrawing(true);
 
         // Set the layouts property
         cadRasterizationOptions.setLayouts( new String[] { "Model" } );

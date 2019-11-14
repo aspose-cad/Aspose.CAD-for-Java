@@ -27,9 +27,6 @@ public class ConvertAllCADLayersToSeparateImages {
 		// Set image width & height
 		rasterizationOptions.setPageWidth(500);
 		rasterizationOptions.setPageHeight(500);
-
-		// Set the drawing to render at the center of image
-//		rasterizationOptions.setCenterDrawing(true);
 		
 		// Get the layers in an instance of CadLayersDictionary. 
 		// Iterate over the layers

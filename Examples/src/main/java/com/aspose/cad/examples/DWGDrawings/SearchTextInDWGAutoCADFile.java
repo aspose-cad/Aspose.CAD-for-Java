@@ -23,7 +23,7 @@ public class SearchTextInDWGAutoCADFile {
 		searchTextInDWGAutoCADFile();
 		
 		// Search For Text In Specific Layout
-		searchForTextInSpecificLayout();
+		
 	}
 
 	public static void searchTextInDWGAutoCADFile() 
@@ -69,7 +69,7 @@ private static void IterateCADNodeEntities(CadBaseEntity obj)
 
             for (CadBaseEntity tempobj : childInsertObject.getChildObjects())
             { 
-                IterateCADNodes(tempobj); 
+                IterateCADNodeEntities(tempobj); 
             } 
             break; 
 
@@ -87,14 +87,7 @@ private static void IterateCADNodeEntities(CadBaseEntity obj)
     } 
 }
 
-    private static void searchForTextInSpecificLayout() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private static void IterateCADNodes(CadBaseEntity tempobj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+   
 
 //ExEnd:SearchTextInDWGAutoCADFile
 }

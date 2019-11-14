@@ -19,15 +19,15 @@ public class SupportMLeaderEntityForDWGFormat {
             String dataDir = Utils.getDataDir(SupportMLeaderEntityForDWGFormat.class) + "DWGDrawings/";
 	    //ExStart:SupportMLeaderEntityForDWGFormat
        
-            String file = "file path";
+            String file = dataDir + "Multileaders.dwg";
             Image image = Image.load(file);
-            {
+            
                 // Test
                 CadImage cadImage = (CadImage)image;
 
   
                Assert.areNotEqual(cadImage.getEntities().length, 0);
-                CadMLeader cadMLeader = (CadMLeader)cadImage.getEntities()[0];
+                CadMLeader cadMLeader = (CadMLeader)cadImage.getEntities()[2];
 
                 Assert.areEqual(cadMLeader.getStyleDescription(), "Standard");
                 Assert.areEqual(cadMLeader.getLeaderStyleId(), "12E");
@@ -74,7 +74,7 @@ public class SupportMLeaderEntityForDWGFormat {
                 Assert.areEqual(cadMLeader.getTextHeight(), 1.0, 0.01);
 
 //ExEnd:SupportMLeaderEntityForDWGFormat
-    }
+    
 }
 }
          

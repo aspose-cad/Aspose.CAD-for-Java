@@ -26,7 +26,7 @@ public static void main(String[] args) {
     //ExStart:ParticularDWGToImage
     // The path to the resource directory.
         String dataDir = Utils.getDataDir(ParticularDWGToImage.class) + "DWGDrawings/";
-        String sourceFilePath = dataDir + "visualization_conference_room.dwg";
+        String sourceFilePath = dataDir + "visualization_-_conference_room.dwg";
 
         CadImage cadImage = ((CadImage)(Image.load(sourceFilePath)));
 

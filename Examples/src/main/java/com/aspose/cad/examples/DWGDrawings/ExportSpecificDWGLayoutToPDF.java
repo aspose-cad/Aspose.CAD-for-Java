@@ -11,7 +11,7 @@ public class ExportSpecificDWGLayoutToPDF {
             // The path to the resource directory.
             String dataDir = Utils.getDataDir(ExportSpecificDWGLayoutToPDF.class) + "DWGDrawings/";
         //ExStart:ExportSpecificDWGLayoutToPDF
-            String srcFile = dataDir + "visualization_conference_room.dwg";
+            String srcFile = dataDir + "visualization_-_conference_room.dwg";
 
             Image image = Image.load(srcFile);
 

@@ -13,7 +13,7 @@ public class DWGToCompliancePDF {
 		// The path to the resource directory.
 		String dataDir = Utils.getDataDir(DWGToCompliancePDF.class) + "DWGDrawings/";
 	    //ExStart:DWGToCompliancePDF
-         	String srcFile = dataDir + "visualization_conference_room.dwg";
+         	String srcFile = dataDir + "Bottom_plate.dwg";
        		
 	
                 com.aspose.cad.Image objImage = com.aspose.cad.Image.load(srcFile);

@@ -19,17 +19,17 @@ public class ExportSTLToPNG {
     {
         //ExStart:ExportSTLToPNG
         String dataDir = Utils.getDataDir(ExportSTLToPNG.class) + "ExportingSTL/";
-        String fileName = "example.stl";
+        String fileName = dataDir + "example.stl";
 
         CadImage cadImage = (CadImage)Image.load(fileName);
         CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
         vectorOptions.setPageWidth(1500);
         vectorOptions.setPageHeight(1500);
-//        vectorOptions.setCenterDrawing(true);
+ 
         PngOptions pngOptions = new PngOptions();
         //pngOptions.setVectorRasterizationOptions(rasterizationOptions);
-        String outPath = "galeon.stl.png";
-        cadImage.save(dataDir, pngOptions);
+        String outPath = dataDir + "galeon.stl.png";
+        cadImage.save(outPath, pngOptions);
 
         //ExEnd:ExportSTLToPNG
     }

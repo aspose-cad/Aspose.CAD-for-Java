@@ -18,7 +18,7 @@ public class ExportToBMP {
                  // The path to the resource directory.
 		String dataDir = Utils.getDataDir(ExportToBMP.class) + "ExportingCAD/";
                 //ExStart:ExportToBMP
-                String fileName = ("APFH Floor Plan.dwf");
+                String fileName = (dataDir + "site.dwf");
                
             com.aspose.cad.Image image = com.aspose.cad.Image.load(fileName);
         
@@ -26,12 +26,12 @@ public class ExportToBMP {
            
             CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
             bmpOptions.setVectorRasterizationOptions(rasterizationOptions);
-//            rasterizationOptions.setCenterDrawing(true);
+ 
             rasterizationOptions.setPageHeight(500);
             rasterizationOptions.setPageWidth(500);
             rasterizationOptions.setLayouts(new String[] { "Model" });
             // export
-            String outPath = fileName + ".bmp";
+            String outPath = dataDir +"site.bmp";
             image.save(outPath, bmpOptions);
           		
 	 //ExEnd:ExportToBMP

@@ -17,18 +17,18 @@ public class ExportToPDF {
                  // The path to the resource directory.
 		String dataDir = Utils.getDataDir(ExportToPDF.class) + "ExportingCAD/";
 		//ExStart:ExportToPDF
-                String fileName = ("APFH Floor Plan.dwf");
+                String fileName = (dataDir +"site.dwf");
                 com.aspose.cad.Image image = com.aspose.cad.Image.load(fileName);
                 {
                     PdfOptions pdfOptions = new PdfOptions();
                     CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
                     pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
-//                    rasterizationOptions.setCenterDrawing(true);
+ 
                     rasterizationOptions.setPageHeight(500);
                     rasterizationOptions.setPageWidth(500);
                     rasterizationOptions.setLayouts(new String[] { "Model" });
                     // export
-                    String outPath = fileName + ".pdf";
+                    String outPath = dataDir + "site.pdf";
                     image.save(outPath, pdfOptions);
                 }		
 

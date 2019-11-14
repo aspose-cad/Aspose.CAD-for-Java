@@ -19,17 +19,17 @@ public class ExportDXFToWMF {
 		
 		Image image = Image.load(srcFile);
 		
-	        IfcImage cadImage = (IfcImage)Image.load(("example.ifc"));
+	        IfcImage cadImage = (IfcImage)Image.load((dataDir +"example.ifc"));
             try
             {
               {
                 CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
-//                rasterizationOptions.setCenterDrawing(true);
+ 
                 rasterizationOptions.setPageWidth(100);
                 rasterizationOptions.setPageHeight(100);
                 WmfOptions wmfOptions = new WmfOptions();
               
-                cadImage.save("example.ifc.wmf", wmfOptions);
+                cadImage.save(dataDir+" example.ifc.wmf", wmfOptions);
             }
           }
           finally

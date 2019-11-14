@@ -35,7 +35,7 @@ public class ExportSpecificDXFLayoutToImage {
 	    CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
 	    rasterizationOptions.setPageWidth(1600);
 	    rasterizationOptions.setPageHeight(1600);  
-//            rasterizationOptions.setCenterDrawing(true);
+ 
           
             String[] stringArray = Arrays.copyOf(layersNames.toArray(), layersNames.toArray().length, String[].class);
             

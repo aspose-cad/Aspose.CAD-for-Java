@@ -37,7 +37,7 @@ public class SupportOfBlockClipping {
         rasterizationOptions.setPageHeight(1600);
         rasterizationOptions.setBorderX(30);
         rasterizationOptions.setBorderY(5);
-//        rasterizationOptions.setCenterDrawing(true);
+ 
         rasterizationOptions.setLayouts( new String[] { "Model" } );
         
         

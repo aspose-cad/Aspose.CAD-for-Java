@@ -35,7 +35,6 @@ public static void main(String[] args){
 
     CadRasterizationOptions cadRasterizationOptions = new CadRasterizationOptions();
     cadRasterizationOptions.setDrawType(CadDrawTypeMode.UseObjectColor);
-//    cadRasterizationOptions.setCenterDrawing(true);
     cadRasterizationOptions.setPageHeight(1600);
     cadRasterizationOptions.setPageWidth(1600);
     cadRasterizationOptions.setBackgroundColor(com.aspose.cad.Color.getBlack());

@@ -17,16 +17,16 @@ public class ExportIFCToPNG {
      {
         String dataDir = Utils.getDataDir(ExportIFCToPNG.class) + "ExportingIFC/";
         //ExStart:ExportIFCToPNG
-        String fileName = "example.ifc";
+        String fileName = dataDir +"example.ifc";
         IfcImage cadImage = (IfcImage)Image.load(fileName);
 
         CadRasterizationOptions vectorOptions = new CadRasterizationOptions();
         vectorOptions.setPageWidth(1500);
         vectorOptions.setPageHeight(1500);
-//        vectorOptions.setCenterDrawing(true);
+ 
         PngOptions pngOptions = new PngOptions();
         pngOptions.setVectorRasterizationOptions(vectorOptions);
-        String outPath = fileName + ".png";
+        String outPath = dataDir + "example.png";
         cadImage.save(dataDir, pngOptions);
 
 

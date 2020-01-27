@@ -1,12 +1,14 @@
 package com.aspose.cad.examples.ExportingDGN;
 
+import com.aspose.cad.examples.Utils.Utils;
+
 public class AccessingUnderlayFlagsofDWG 
 {
     public static void main(String[] args)
     {
         //ExStart:AccessingUnderlayFlagsofDWG
-        // Input file name and path
-        String fileName = "BlockRefDgn.dwg";
+      String dataDir = Utils.getDataDir(AccessingUnderlayFlagsofDWG.class) + "DWGDrawings/";
+        String fileName = dataDir + "BlockRefDgn.dwg";
 
         // Load an existing DWG file and convert it into CadImage 
         com.aspose.cad.fileformats.cad.CadImage image = (com.aspose.cad.fileformats.cad.CadImage) com.aspose.cad.Image.load(fileName);

@@ -57,7 +57,7 @@ public class EnableTracking {
             System.out.println("Have some problems:");
 
             int idxError = 1;
-            for (RenderResult rr : result.Failures)
+            for (RenderResult rr : result.getFailures())
             {
                 System.out.printf("{0}. {1}, {2}", idxError, rr.getRenderCode(), rr.getMessage());
                 idxError++;

@@ -15,9 +15,9 @@ Directory | Description
 
 ## CAD File Processing Features
 
-- [Adjust CAD drawing size](https://docs.aspose.com/display/cadjava/Adjusting+CAD+Drawing+Size).
+- [Adjust CAD drawing size](https://docs.aspose.com/cad/java/adjusting-cad-drawing-size/).
 - Convert CAD drawings to other file formats.
-- [Export 3D AutoCAD Images to PDF](https://docs.aspose.com/display/cadjava/Exporting+CAD#ExportingCAD-Export3DAutoCADImagestoPDF).
+- [Export 3D AutoCAD Images to PDF](https://docs.aspose.com/cad/java/exporting-cad/).
 - Exporting CAD Layouts to PDF
 - Set timeout on save to avoid spending lot of time or consuming a lot of memory.
 
@@ -47,7 +47,7 @@ Directory | Description
 
 ## Get Started with Aspose.CAD for Java
 
-Aspose hosts all Java APIs at the [Aspose Repository](https://repository.aspose.com/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-cad). You can easily use Aspose.BarCode for Java API directly in your Maven projects with simple configurations. For the detailed instructions please visit [Installing Aspose.CAD for Java from Maven Repository](https://docs.aspose.com/display/cadjava/Installation#Installation-InstallingAspose.CADforJavafromMavenRepository) documentation page.
+Aspose hosts all Java APIs at the [Aspose Repository](https://repository.aspose.com/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-cad). You can easily use Aspose.BarCode for Java API directly in your Maven projects with simple configurations. For the detailed instructions please visit [Installing Aspose.CAD for Java from Maven Repository](https://docs.aspose.com/cad/java/installation/) documentation page.
 
 ## Converting .DXF CAD Drawing to .PNG Format using Java
 
@@ -73,4 +73,4 @@ options.setVectorRasterizationOptions(rasterizationOptions);
 image.save(dataDir + "conic_pyramid_raster_image_out_.png", options);
 ```
 
-[Product Page](https://products.aspose.com/cad/java) | [Docs](https://docs.aspose.com/display/cadjava/Home) | [Demos](https://products.aspose.app/cad/family) | [API Reference](https://apireference.aspose.com/java/cad/) | [Examples](https://github.com/aspose-cad/Aspose.CAD-for-Java) | [Blog](https://blog.aspose.com/category/cad/) | [Free Support](https://forum.aspose.com/c/cad) |  [Temporary License](https://purchase.aspose.com/temporary-license)
+[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/cad/java) | [Docs](https://docs.aspose.com/cad/java/) | [Demos](https://products.aspose.app/cad/family) | [API Reference](https://apireference.aspose.com/java/cad/) | [Examples](https://github.com/aspose-cad/Aspose.CAD-for-Java) | [Blog](https://blog.aspose.com/category/cad/) | [Free Support](https://forum.aspose.com/c/cad) |  [Temporary License](https://purchase.aspose.com/temporary-license)

@@ -11,6 +11,7 @@ import com.aspose.cad.examples.Utils.Utils;
 import com.aspose.cad.fileformats.cad.CadDrawTypeMode;
 import com.aspose.cad.fileformats.cad.CadImage;
 import com.aspose.cad.imageoptions.CadRasterizationOptions;
+import com.aspose.cad.imageoptions.Margins;
 import com.aspose.cad.imageoptions.PdfOptions;
 
 /**
@@ -24,24 +25,27 @@ public class SupportOfBlockClipping {
         //ExStart:SupportOfBlockClipping
         
         // The path to the resource directory.
-	String dataDir = Utils.getDataDir(RenderDXFAsPDF.class) + "DXFDrawings/";
+	    String dataDir = Utils.getDataDir(RenderDXFAsPDF.class) + "DXFDrawings/";
         String inputFile = dataDir + "SLS-CW-CD-CE001-R01_blockClip.dxf";
         String outputFile = dataDir + "SLS-CW-CD-CE001-R01_blockClip.pdf";
         
         CadImage cadImage = (CadImage)Image.load(inputFile);
-        
+
+        Margins margins = new Margins();
+        margins.setTop(5);
+        margins.setRight(30);
+        margins.setBottom(5);
+        margins.setLeft(30);
+
         CadRasterizationOptions rasterizationOptions = new CadRasterizationOptions();
         rasterizationOptions.setBackgroundColor(Color.getWhite());
         rasterizationOptions.setDrawType(CadDrawTypeMode.UseObjectColor);
         rasterizationOptions.setPageWidth(1200);
         rasterizationOptions.setPageHeight(1600);
-        rasterizationOptions.setBorderX(30);
-        rasterizationOptions.setBorderY(5);
- 
+        rasterizationOptions.setMargins(margins);
+
         rasterizationOptions.setLayouts( new String[] { "Model" } );
-        
-        
-        
+
         PdfOptions pdfOptions = new PdfOptions();
         pdfOptions.setVectorRasterizationOptions(rasterizationOptions);
         

@@ -21,7 +21,7 @@
          <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-cad</artifactId>
-            <version>20.8</version>
+            <version>20.9</version>
             
         </dependency>
     </dependencies>
